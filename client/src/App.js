@@ -1,11 +1,6 @@
-import './App.css';
+import './App.sass';
+import Page from './components/Page'
 
-function App() {
-  return (
-    <div>
-      Hello World
-    </div>
-  );
-}
+const App = () => <Page />;
 
 export default App;
