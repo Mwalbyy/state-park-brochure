@@ -15,13 +15,15 @@ export default function Navigation({ currentPage, handlePageChange }) {
         className="fixedPos"
       >
         <Container>
-          <Navbar.Brand href="#home"
-                onClick={() => handlePageChange("Home")}
-                className={
-                  currentPage === "Home"
-                    ? "nav-link active navText"
-                    : "nav-link navText"
-                }>
+          <Navbar.Brand
+            href="#home"
+            onClick={() => handlePageChange("Home")}
+            className={
+              currentPage === "Home"
+                ? "nav-link active navText"
+                : "nav-link navText"
+            }
+          >
             <div>National Park </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -60,6 +62,8 @@ export default function Navigation({ currentPage, handlePageChange }) {
               >
                 Weather
               </Nav.Link>
+            </Nav>
+            <Nav>
               <Nav.Link
                 href="#Profile"
                 onClick={() => handlePageChange("Profile")}
@@ -75,6 +79,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <h1 className="yoyo">Hello</h1>
     </>
   );
 }
