@@ -10,17 +10,29 @@
 // =======================
 // Global
 // =======================
-
-// Variables
 $text-color: #ffffff
-$dark-bg: #0000
-// reset default margin and padding
+$dark-bg: #162529
+$light-bg: #425256
+$light-text: #C0FAFF
+$orange-text: #FB9038
+$tan-text: #FFE9CF
+$colors: $dark-bg,$light-bg,$light-text,$orange-text,$tan-text
+
 *
     margin: 0
     padding: 0
-// sets text color to white by default
+
 body
-   color: $text-color
+    color: $text-color
+    overflow: hidden
+
+@mixin centerText
+    text-align: center
+    color: white
+
+@for $i from 1 through 4
+    .F-#{$i}
+        font-size: 3em * $i
 
 // =======================
 // Navigation
@@ -29,7 +41,19 @@ body
 // =======================
 // Parrelex
 // =======================
+.parkName
+    @include centerText
+    margin-top: 10rem
+
+.heading
+    @include centerText
+
+.cardText
+    @include centerText
+    background-color: $light-bg
+    width: 40%
     
+
 // =======================
 // Description
 // =======================
