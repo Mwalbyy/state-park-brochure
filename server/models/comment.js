@@ -9,7 +9,7 @@ const commentSchema = new Schema ({
         maxlength: 280,
         trim: true,
     },
-    thoughtAuthor: {
+    commentAuthor: {
         type: String,
         required: true,
         trim: true,
@@ -21,6 +21,6 @@ const commentSchema = new Schema ({
     } 
 });
 
-const Comment = model('Comment', commentSchema);
 
-module.exports = Comment
+
+module.exports = commentSchema
