@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Post, Comment } = require('../models');
+const { User, Post } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -51,7 +51,7 @@ const resolvers = {
 
       return post;
     },
-    addComment: async (parent, { posttId, commentText, commentAuthor }) => {
+    addComment: async (parent, { postId, commentText, commentAuthor }) => {
       return Post.findOneAndUpdate(
         { _id: postId },
         {

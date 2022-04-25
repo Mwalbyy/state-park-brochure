@@ -32,10 +32,9 @@ const typeDefs = gql `
 
     type Query {
         users: [User]
-        user(username: String): [Post]
-        user(username: String): [Comment]
+        user(username: String): User
         post(postId: ID!): Post
-        comment(commentId: ID!): Comment
+        posts(username: String): [Post]
     }
 
     type Mutation {
@@ -52,7 +51,7 @@ const typeDefs = gql `
             commentText: String!
         ): Post
         removePost(postId: ID!): Post
-        removeComment(postId: ID!, commentId ID!): Post 
+        removeComment(postId: ID!, commentId: ID!): Post 
     }
 `
 
