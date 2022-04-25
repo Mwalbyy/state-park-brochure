@@ -9,6 +9,11 @@ const postSchema = new Schema ({
     maxlength: 280,
     trim: true,
   },
+  thoughtAuthor: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   postImage: {
     type: String,
     required: 'You must include an image',
