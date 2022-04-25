@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Profile from "./pages/Profile"
 import Posts from "./pages/Posts"
 import Weather from "./pages/Weather"

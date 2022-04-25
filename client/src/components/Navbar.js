@@ -73,13 +73,12 @@ export default function Navigation({ currentPage, handlePageChange }) {
                     : "nav-link navText"
                 }
               >
-                Profile
+                <i class="fa-solid fa-user fa-2xl"></i>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <h1 className="yoyo">Hello</h1>
     </>
   );
 }
