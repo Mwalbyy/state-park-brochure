@@ -5,7 +5,8 @@ import pastPic from "./images/history1.jpg";
 
 export default function Home() {
   const center = { display: 'flex', alignItems: 'center',justifyContent: 'center'}
-  const alignCenter ={display: 'flex', alignItems: 'center'}
+  const alignCenterRight ={display: 'flex', alignItems: 'center',justifyContent: 'flex-start'}
+  const alignCenterLeft ={display: 'flex', alignItems: 'center',justifyContent: 'flex-end'}
   return (
     <>
       <Parallax pages={6}>
@@ -45,7 +46,16 @@ export default function Home() {
         offset={2.3}
         factor={3}
         sticky={{ start: 2, end: 3 }}
-        style={{...alignCenter}}
+        style={{...alignCenterLeft}}
+        >
+          <h1 className='cardText F-1 '>SUP</h1>
+        </ParallaxLayer>
+        <ParallaxLayer
+        speed={2}
+        offset={2.3}
+        factor={3}
+        sticky={{ start: 2, end: 3 }}
+        style={{...alignCenterRight}}
         >
           <h1 className='cardText F-1 '>SUP</h1>
         </ParallaxLayer>
