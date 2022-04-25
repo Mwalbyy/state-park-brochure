@@ -10,18 +10,25 @@
 // =======================
 // Global
 // =======================
-
-// Variables
 $text-color: #ffffff
 $dark-bg: #0000
-// reset default margin and padding
+
 *
     margin: 0
     padding: 0
-// sets text color to white by default
-body
-   color: $text-color
 
+body
+    color: $text-color
+    overflow: hidden
+
+@mixin centerText
+    text-align: center
+    color: white
+    
+@for $i from 1 through 4 
+    .F-#{$i} 
+        font-size: 3rem * $i
+        
 // =======================
 // Navigation
 // =======================
@@ -29,7 +36,10 @@ body
 // =======================
 // Parrelex
 // =======================
-    
+.parkName
+    @include centerText
+    margin-top: 10rem
+
 // =======================
 // Description
 // =======================
