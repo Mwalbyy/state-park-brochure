@@ -3,6 +3,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
 import topo from "./images/topo.PNG";
+import Navbar from "../../Navbar"
 // import topoLink from "https://react-spring.io/components/parallax#parallax"
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
   };
   return (
     <>
+      <Navbar/>
       <Parallax pages={8}>
         {/* Cover page */}
         <ParallaxLayer
@@ -35,7 +37,7 @@ export default function Home() {
           }}
         >
           <ParallaxLayer speed={0.5}>
-            <h1 className="centerClass  F-3">New Jersey Cedar reserve </h1>
+            <h1 className="centerClass F-3">New Jersey Cedar reserve </h1>
           </ParallaxLayer>
         </ParallaxLayer>
         {/* backGround for the history section */}
@@ -90,7 +92,7 @@ export default function Home() {
           <img
             className="pastPicture"
             src={pastPic}
-            alt="black and white picture of the forest in the past"
+            alt="forest in the past"
           />
         </ParallaxLayer>
         <ParallaxLayer
@@ -109,10 +111,10 @@ export default function Home() {
           sticky={{ start: 4.5, end: 5.5 }}
           style={{ ...center }}
         >
-          <a href={"https://react-spring.io/components/parallax#parallax"} target={"_blank"}>
+          <a href={"https://react-spring.io/components/parallax#parallax"} target={"_blank"} rel={"noreferrer"}>
           <img
             src={topo}
-            alt="black and white picture of the forest in the past"
+            alt=" forest in the past"
           />
           </a>
         </ParallaxLayer>
