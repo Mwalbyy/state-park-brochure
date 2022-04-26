@@ -1,8 +1,11 @@
+import React, { useContext } from "react"
+
+export const forecast = React.createContext();
+export const fiveDay = () => useContext()
+
 const APIKey = "eeb5a4f4f32c1f7a190544a866cbdd0c"
 
 let searchBtn = document.querySelector(".searchBtn")
-let cityEntryEl = document.querySelector(".city-entry")
-let searchHistoryEl = document.querySelector("#search-history")
 let currentWeatherEl = document.querySelector("#current-weather")
 let fiveDayForecastEl = document.querySelector("#five-day-forecast")
 
