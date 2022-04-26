@@ -30,6 +30,10 @@ body
     text-align: center
     color: white
 
+@mixin centerDiv
+    display: flex
+    align-content: center
+
 @for $i from 1 through 4
     .F-#{$i}
         font-size: 3em * $i
@@ -44,6 +48,8 @@ body
 .parkName
     @include centerText
     margin-top: 10rem
+    background-color: black
+    width: fit-content
 
 .heading
     @include centerText
@@ -52,8 +58,10 @@ body
     @include centerText
     background-color: $light-bg
     width: 40%
+.centerClass
+    @include centerDiv
+    justify-content: center
     
-
 // =======================
 // Description
 // =======================

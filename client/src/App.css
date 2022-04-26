@@ -28,6 +28,10 @@ body {
   text-align: center;
   color: white;
   margin-top: 10rem;
+  background-color: black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .heading {
@@ -40,5 +44,16 @@ body {
   color: white;
   background-color: #425256;
   width: 40%;
+}
+
+.centerClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,8 +1,8 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import forest from "./images/njTest2.jpg";
+import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
-import topo from "./images/topo.PNG"
+import topo from "./images/topo.PNG";
 
 export default function Home() {
   const center = {
@@ -22,7 +22,7 @@ export default function Home() {
   };
   return (
     <>
-      <Parallax pages={10}>
+      <Parallax pages={8}>
         {/* Cover page */}
         <ParallaxLayer
           offset={0}
@@ -34,7 +34,7 @@ export default function Home() {
           }}
         >
           <ParallaxLayer speed={0.5}>
-            <h1 className="parkName F-3">New Jersey Cedar reserve </h1>
+            <h1 className="centerClass F-3">New Jersey Cedar reserve </h1>
           </ParallaxLayer>
         </ParallaxLayer>
         {/* backGround for the history section */}
@@ -45,7 +45,11 @@ export default function Home() {
           style={{ backgroundColor: "#162529" }}
         ></ParallaxLayer>
         {/* Title of history section */}
-        <ParallaxLayer speed={0.5} offset={1.1} sticky={{ start: 1.1, end: 3.2 }}>
+        <ParallaxLayer
+          speed={0.5}
+          offset={1.1}
+          sticky={{ start: 1.1, end: 3.2 }}
+        >
           <h1 className="heading F-3"> brief History</h1>
         </ParallaxLayer>
         {/* single History card */}
@@ -56,7 +60,7 @@ export default function Home() {
           sticky={{ start: 1.3, end: 2 }}
           style={{ ...center }}
         >
-          <h1 className="cardText F-1 ">SUP</h1>
+          <h1 className="cardText F-1 ">This is an example text box so that I can do sizing when I actually fill this shit out  </h1>
         </ParallaxLayer>
         {/* Double History cards */}
         <ParallaxLayer
@@ -72,12 +76,13 @@ export default function Home() {
           speed={3}
           offset={2.3}
           factor={3}
-          sticky={{ start:  2.3, end: 3.2 }}
+          sticky={{ start: 2.3, end: 3.2 }}
           style={{ ...alignCenterRight }}
         >
-          
-            <img src={pastPic} alt="black and white picture of the forest in the past" />
-          
+          <img
+            src={pastPic}
+            alt="black and white picture of the forest in the past"
+          />
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
@@ -85,7 +90,11 @@ export default function Home() {
           factor={5.5}
           style={{ backgroundColor: "black" }}
         ></ParallaxLayer>
-        <ParallaxLayer speed={0.5} offset={4.2} sticky={{ start: 4.2, end: 5.5 }}>
+        <ParallaxLayer
+          speed={0.5}
+          offset={4.2}
+          sticky={{ start: 4.2, end: 5.5 }}
+        >
           <h1 className="heading F-3">Topography</h1>
         </ParallaxLayer>
         <ParallaxLayer
@@ -95,7 +104,23 @@ export default function Home() {
           sticky={{ start: 4.5, end: 5.5 }}
           style={{ ...center }}
         >
-            <img src={topo} alt="black and white picture of the forest in the past" />
+          <img
+            src={topo}
+            alt="black and white picture of the forest in the past"
+          />
+        </ParallaxLayer>
+        <ParallaxLayer
+          speed={1}
+          offset={6.5}
+          factor={4}
+          style={{ backgroundColor: "blue" }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          speed={.2}
+          offset={6.7}
+          sticky={{ start: 6.7, end: 8 }}
+        >
+          <h1 className="heading F-3">Current Weather</h1>
         </ParallaxLayer>
       </Parallax>
     </>
