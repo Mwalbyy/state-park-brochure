@@ -10,15 +10,17 @@ export default function Home() {
     alignItems: "center",
     justifyContent: "center",
   };
-  const alignCenterRight = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-  };
   const alignCenterLeft = {
     display: "flex",
     alignItems: "center",
+    justifyContent: "flex-start",
+    marginLeft: '100px'
+  };
+  const alignCenterRight = {
+    display: "flex",
+    alignItems: "center",
     justifyContent: "flex-end",
+    marginRight: '200px'
   };
   return (
     <>
@@ -60,7 +62,7 @@ export default function Home() {
           sticky={{ start: 1.3, end: 2 }}
           style={{ ...center }}
         >
-          <h1 className="cardText F-1 ">This is an example text box so that I can do sizing when I actually fill this shit out  </h1>
+          <h1 className="cardText F-1 ">This is an example text box so that I can do sizing when I actually fill this out  </h1>
         </ParallaxLayer>
         {/* Double History cards */}
         <ParallaxLayer
@@ -68,16 +70,16 @@ export default function Home() {
           offset={2.3}
           factor={3}
           sticky={{ start: 2.3, end: 3.2 }}
-          style={{ ...alignCenterLeft }}
+          style={{ ...alignCenterRight }}
         >
-          <h1 className="cardText F-1 ">SUP</h1>
+          <h1 className="cardText F-1 ">This is a picture of some people logging, so sad I know, dont worry tho they are gonna stop because I asked them nicely</h1>
         </ParallaxLayer>
         <ParallaxLayer
           speed={3}
           offset={2.3}
           factor={3}
           sticky={{ start: 2.3, end: 3.2 }}
-          style={{ ...alignCenterRight }}
+          style={{ ...alignCenterLeft }}
         >
           <img
             src={pastPic}
@@ -87,13 +89,13 @@ export default function Home() {
         <ParallaxLayer
           speed={1}
           offset={4}
-          factor={5.5}
-          style={{ backgroundColor: "black" }}
+          factor={5}
+          style={{ backgroundColor: "#227B69" }}
         ></ParallaxLayer>
         <ParallaxLayer
           speed={0.5}
           offset={4.2}
-          sticky={{ start: 4.2, end: 5.5 }}
+          sticky={{ start: 4.2, end: 5 }}
         >
           <h1 className="heading F-3">Topography</h1>
         </ParallaxLayer>
@@ -113,14 +115,14 @@ export default function Home() {
           speed={1}
           offset={6.5}
           factor={4}
-          style={{ backgroundColor: "blue" }}
+          style={{ backgroundColor: "#56A873" }}
         ></ParallaxLayer>
         <ParallaxLayer
           speed={.2}
           offset={6.7}
           sticky={{ start: 6.7, end: 8 }}
         >
-          <h1 className="heading F-3">Current Weather</h1>
+          <h1 className="heading weatherH1 F-3">Current Weather</h1>
         </ParallaxLayer>
       </Parallax>
     </>
