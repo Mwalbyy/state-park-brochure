@@ -4,7 +4,6 @@
 }
 
 body {
-  color: #ffffff;
   overflow: hidden;
 }
 
@@ -28,6 +27,10 @@ body {
   text-align: center;
   color: white;
   margin-top: 10rem;
+  background-color: black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .heading {
@@ -39,6 +42,23 @@ body {
   text-align: center;
   color: white;
   background-color: #425256;
+  padding: 1rem;
+  border-radius: 10px;
   width: 40%;
+}
+
+.centerClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weatherH1 {
+  color: black;
 }
 /*# sourceMappingURL=App.css.map */

@@ -23,12 +23,15 @@ $colors: $dark-bg,$light-bg,$light-text,$orange-text,$tan-text
     padding: 0
 
 body
-    color: $text-color
     overflow: hidden
 
 @mixin centerText
     text-align: center
     color: white
+
+@mixin centerDiv
+    display: flex
+    align-content: center
 
 @for $i from 1 through 4
     .F-#{$i}
@@ -44,6 +47,8 @@ body
 .parkName
     @include centerText
     margin-top: 10rem
+    background-color: black
+    width: fit-content
 
 .heading
     @include centerText
@@ -51,9 +56,16 @@ body
 .cardText
     @include centerText
     background-color: $light-bg
+    padding: 1rem
+    border-radius: 10px
     width: 40%
-    
 
+.centerClass
+    @include centerDiv
+    justify-content: center
+    
+.weatherH1
+    color: black
 // =======================
 // Description
 // =======================
