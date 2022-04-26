@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile"
 import Posts from "./pages/Posts"
-import Weather from "./pages/Weather"
+import Weather from "./pages/weather/Weather"
 import SinglePost from "./pages/SinglePost"
 
 export default function Portfolio() {
