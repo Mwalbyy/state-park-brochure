@@ -5,17 +5,16 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('posts');
+      return await User.find().populate('posts');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('posts');
+      return await User.findOne({ username }).populate('posts');
     },
-    posts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Post.find(params).sort({ createdAt: -1 });
+    posts: async () => {
+      return await Post.find().sort({ createdAt: -1 });
     },
     post: async (parent, { postId }) => {
-      return Post.findOne({ _id: postId });
+      return await Post.findOne({ _id: postId });
     },
   },
   Mutation: {
@@ -41,8 +40,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addPost: async (parent, { postText, postAuthor, postImage }) => {
-      const post = await Post.create({ postText, postAuthor, postImage });
+    addPost: async (parent, { postText, postAuthor }) => {
+      const post = await Post.create({ postText, postAuthor });
 
       await User.findOneAndUpdate(
         { username: postAuthor },

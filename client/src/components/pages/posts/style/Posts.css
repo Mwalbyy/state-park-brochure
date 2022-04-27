@@ -5,6 +5,17 @@
     
 }
 
+.postList {
+    list-style: none;
+    font-size: 1vw;
+    border: 3px solid beige ;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    
+}
+
 .addBtn {
     float: right;
     background: grey;

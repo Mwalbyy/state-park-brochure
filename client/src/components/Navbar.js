@@ -16,7 +16,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
       >
         <Container>
           <Navbar.Brand
-            href="#home"
             onClick={() => handlePageChange("Home")}
             className={
               currentPage === "Home"
@@ -30,7 +29,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link
-                href="#home"
                 onClick={() => handlePageChange("Home")}
                 className={
                   currentPage === "Home"
@@ -41,7 +39,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#Posts"
                 onClick={() => handlePageChange("Posts")}
                 className={
                   currentPage === "Posts"
@@ -52,7 +49,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 Posts
               </Nav.Link>
               <Nav.Link
-                href="#Weather"
                 onClick={() => handlePageChange("Weather")}
                 className={
                   currentPage === "Weather"
@@ -65,7 +61,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
             </Nav>
             <Nav>
               <Nav.Link
-                href="#Profile"
                 onClick={() => handlePageChange("Profile")}
                 className={
                   currentPage === "Profile"
