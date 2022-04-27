@@ -3,7 +3,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/pastPic.jpg";
 import topographyReal from "./images/topographyReal.PNG";
-import Navbar from "../../Navbar";
 import { Card } from "react-bootstrap";
 // import topographyLink from "https://react-spring.io/components/parallax#parallax"
 // https://earth.google.com/web/@40.98667028,-73.9053768,38.22883411a,2295.25763915d,35y,-77.59128487h,65.92113942t,-0r
@@ -11,7 +10,6 @@ import { Card } from "react-bootstrap";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Parallax pages={8}>
         {/* Cover page */}
         <ParallaxLayer

@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from 'react-bootstrap/Modal';
 import forest from "./home/images/definitlyNJ.jpg";
-import Navbar from "../Navbar"
 
 // const deleteBtn = document.querySelector('.deleteBtn');
 // async function deletePost(){
@@ -31,7 +30,6 @@ export default function SinglePost() {
 
   return (
 <>
-<Navbar/>
     <div style={{
       height: "100vh",
       backgroundImage: `linear-gradient(to bottom, transparent,90%, #162529), url(${forest})`,
