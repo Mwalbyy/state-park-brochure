@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
-import pastPic from "./images/history1.jpg";
+import pastPic from "./images/pastPic.jpg";
 import topographyReal from "./images/topographyReal.PNG";
 import Navbar from "../../Navbar";
 import { Card } from "react-bootstrap";
@@ -24,7 +24,7 @@ export default function Home() {
           }}
         >
           <ParallaxLayer speed={0.5}>
-            <h1 className="centerClass F-3">New Jersey Cedar reserve </h1>
+            <h1 className="centerClass F-3">Palisades Interstate Park</h1>
           </ParallaxLayer>
         </ParallaxLayer>
         {/* backGround for the history section */}
@@ -34,13 +34,13 @@ export default function Home() {
           factor={6}
           style={{ backgroundColor: "#162529" }}
         ></ParallaxLayer>
-        {/* Title of history section */}
+        {/* Title of about section */}
         <ParallaxLayer
           speed={0.5}
           offset={1.1}
           sticky={{ start: 1.1, end: 1.6 }}
         >
-          <h1 className="heading F-3"> brief History</h1>
+          <h1 className="heading F-3">About</h1>
         </ParallaxLayer>
         {/* single History card */}
         <ParallaxLayer
@@ -52,8 +52,9 @@ export default function Home() {
           // style={{ ...center }}
         >
           <h1 className="cardText F-2 ">
-            This is an example text box so that I can do sizing when I actually
-            fill this out{" "}
+            The Palisades Interstate Park in New Jersey is about twelve miles
+            long and half a mile wide, with 2,500 acres of wild Hudson River
+            shorefront, uplands, and cliffs
           </h1>
         </ParallaxLayer>
         {/* Double History cards */}
