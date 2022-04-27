@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import React from 'react'
 import { QUERY_POSTS } from '../../../utils/queries'
 import './style/Posts.css'
+import Navbar from "../../Navbar"
 
 const Posts = () => {
   const { loading, data } = useQuery(QUERY_POSTS, {
@@ -15,6 +16,7 @@ const Posts = () => {
 
   return (
     <>
+    <Navbar/>
     <div className='container'>
       <h1 className='posth1'>Welcome to the Posts Page</h1>
       <button className='addBtn'>Add Post</button>
@@ -27,7 +29,10 @@ const Posts = () => {
               {postList.map((post) => {
                 return (
                   <li className='postList' key={post._id}>
-                    {post.postText} <br></br><br></br> By: {post.postAuthor}
+                    {post.postText}
+                     <br></br>
+                     <br></br> 
+                     By: {post.postAuthor}
                   </li>
                 )
               })} 
