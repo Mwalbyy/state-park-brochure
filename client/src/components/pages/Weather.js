@@ -34,11 +34,11 @@ export default function Weather() {
     
   }, )
   return (
-    <div>
+    <>
       {forecastData.map((singleDay) => {
         return <WeatherCard weather={singleDay} key={singleDay.key}/>
       })}
-    </div> 
+    </> 
   )
 }
 
