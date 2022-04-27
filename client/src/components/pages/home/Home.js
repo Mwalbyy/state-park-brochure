@@ -2,10 +2,10 @@ import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
-import toporeal from "./images/toporeal.PNG";
+import topographyReal from "./images/topographyReal.PNG";
 import Navbar from "../../Navbar";
 import { Card } from "react-bootstrap";
-// import topoLink from "https://react-spring.io/components/parallax#parallax"
+// import topographyLink from "https://react-spring.io/components/parallax#parallax"
 // https://earth.google.com/web/@40.98667028,-73.9053768,38.22883411a,2295.25763915d,35y,-77.59128487h,65.92113942t,-0r
 
 export default function Home() {
@@ -79,6 +79,7 @@ export default function Home() {
             tho they are gonna stop because I asked them nicely
           </h1>
         </ParallaxLayer>
+        {/* background for topography section */}
         <ParallaxLayer
           speed={1}
           offset={4}
@@ -96,7 +97,7 @@ export default function Home() {
           className="centerStart"
         >
           <Card className="cardTopoLong">
-            <Card.Img variant="top" src={toporeal} />
+            <Card.Img variant="top" src={topographyReal} />
             <Card.Body>
               <Card.Title>Trails</Card.Title>
               <Card.Text>
@@ -105,7 +106,10 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory" target={'_blank'}>
+              <Card.Link
+                href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory"
+                target={"_blank"}
+              >
                 All Trails
               </Card.Link>
             </Card.Body>
@@ -122,7 +126,7 @@ export default function Home() {
             <Card.Body>
               <Card.Title className="F-3">Card Title</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Card Subtitle
+                New Jersey{" "}
               </Card.Subtitle>
               <Card.Text>
                 Some quick example text to build on the card title and make up
