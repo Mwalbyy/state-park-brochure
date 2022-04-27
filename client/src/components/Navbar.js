@@ -24,7 +24,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
             }
           >
             <LinkContainer to="/">
-            <div>National Park </div>
+              <div>National Park </div>
             </LinkContainer>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -42,7 +42,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/posts">
-                
+
                 <Nav.Link
                   className={
                     currentPage === "Posts"
@@ -54,28 +54,28 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/weather">
-              <Nav.Link
-                className={
-                  currentPage === "Weather"
-                    ? "nav-link active navText"
-                    : "nav-link navText"
-                }
-              >
-                Weather
-              </Nav.Link>
+                <Nav.Link
+                  className={
+                    currentPage === "Weather"
+                      ? "nav-link active navText"
+                      : "nav-link navText"
+                  }
+                >
+                  Weather
+                </Nav.Link>
               </LinkContainer>
             </Nav>
             <Nav>
               <LinkContainer to="/profile">
-              <Nav.Link
-                className={
-                  currentPage === "Profile"
-                    ? "nav-link active navText"
-                    : "nav-link navText"
-                }
-              >
-                <i className="fa-solid fa-user fa-2xl"></i>
-              </Nav.Link>
+                <Nav.Link
+                  className={
+                    currentPage === "Profile"
+                      ? "nav-link active navText"
+                      : "nav-link navText"
+                  }
+                >
+                  <i className="fa-solid fa-user fa-2xl"></i>
+                </Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

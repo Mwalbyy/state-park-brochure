@@ -1,12 +1,18 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_POSTS = gql`
-    query posts {
-        posts {
-            _id
-            postText
-            postAuthor
-            createdAt
-        }
+query getAllPosts {
+    posts {
+      _id
+      postText
+      postAuthor
+      createdAt
+      comments {
+        _id
+        commentAuthor
+        commentText
+        createdAt
+      }
     }
+  }
 `;
