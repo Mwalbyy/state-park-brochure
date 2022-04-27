@@ -55,10 +55,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 5%;
+  margin-right: 15%;
+}
+
+.centerRightCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40%;
 }
 
 .centerStart {
@@ -108,10 +115,27 @@ body {
   max-height: 20%;
 }
 
-@media only screen and (max-width: 600px) {
+.cardTopoLong {
+  width: 18rem;
+}
+
+.cardTopoStub {
+  width: 25rem;
+}
+
+@media only screen and (max-width: 792px) {
   .pastPicture {
     max-width: 90%;
     max-height: 20%;
+  }
+  .cardTopoLong {
+    width: 45%;
+  }
+  .cardTopoStub {
+    width: 40%;
+  }
+  .centerRightCard {
+    margin-left: 55%;
   }
 }
 /*# sourceMappingURL=App.css.map */

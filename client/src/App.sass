@@ -60,8 +60,11 @@ body
 
 .centerRight
     @include flexALNC
-    justify-content: flex-end
-    margin-right: 5% 
+    margin-right: 15% 
+.centerRightCard
+    @include flexALNC
+    margin-left: 40% 
+
 .centerStart
     @include flexALNC
     justify-content: flex-start
@@ -88,10 +91,22 @@ body
     max-width: 60%
     max-height: 20%
 
-@media only screen and (max-width: 600px)
+.cardTopoLong
+    width: 18rem
+.cardTopoStub
+    width: 25rem
+@media only screen and (max-width: 792px)
     .pastPicture
         max-width: 90%
         max-height: 20%
+    .cardTopoLong
+        width: 45%
+    .cardTopoStub
+        width: 40%
+    .centerRightCard
+        margin-left: 55% 
+
+
 // =======================
 // Description
 // =======================

@@ -7,6 +7,7 @@ import toporeal from "./images/toporeal.PNG";
 import Navbar from "../../Navbar";
 import { Card } from "react-bootstrap";
 // import topoLink from "https://react-spring.io/components/parallax#parallax"
+// https://earth.google.com/web/@40.98667028,-73.9053768,38.22883411a,2295.25763915d,35y,-77.59128487h,65.92113942t,-0r
 
 export default function Home() {
   return (
@@ -95,34 +96,51 @@ export default function Home() {
           sticky={{ start: 4.5, end: 5.5 }}
           className="centerStart"
         >
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardTopoLong">
             <Card.Img variant="top" src={toporeal} />
             <Card.Body>
               <Card.Title>Trails</Card.Title>
               <Card.Text>
-                The interstate parkway provides a variety of trails for people to enjoy
+                The interstate parkway provides a variety of trails for people
+                to enjoy
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory">All Trails</Card.Link>
+              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory">
+                All Trails
+              </Card.Link>
             </Card.Body>
           </Card>
-          
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
           offset={4.5}
           factor={3}
           sticky={{ start: 4.5, end: 5.5 }}
-          className="centerRight"
+          className="centerRightCard"
         >
-          <a
+          <Card className="cardTopoStub">
+            <Card.Body>
+              <Card.Title className="F-3">Card Title</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                Card Subtitle
+              </Card.Subtitle>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+
+          {/* <a
             href={"https://react-spring.io/components/parallax#parallax"}
             target={"_blank"}
             rel={"noreferrer"}
           >
             <img src={topo} alt="" />
-          </a>
+          </a> */}
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
