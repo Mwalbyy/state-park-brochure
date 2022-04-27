@@ -8,29 +8,23 @@ body {
 }
 
 .F-1 {
-  font-size: 3em;
+  font-size: 2.5vw;
 }
 
 .F-2 {
-  font-size: 6em;
+  font-size: 5vw;
 }
 
 .F-3 {
-  font-size: 9em;
+  font-size: 7.5vw;
 }
 
 .F-4 {
-  font-size: 12em;
+  font-size: 10vw;
 }
 
 .parkName {
-  text-align: center;
-  color: white;
   margin-top: 10rem;
-  background-color: black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .heading {
@@ -44,7 +38,7 @@ body {
   background-color: #425256;
   padding: 1rem;
   border-radius: 10px;
-  width: 40%;
+  margin: 0 5% 0 5%;
 }
 
 .centerClass {
@@ -60,5 +54,10 @@ body {
 
 .weatherH1 {
   color: black;
+}
+
+.pastPicture {
+  max-width: 40%;
+  max-height: 20%;
 }
 /*# sourceMappingURL=App.css.map */
