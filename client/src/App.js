@@ -26,7 +26,7 @@ const client = new ApolloClient({
 
             <Route path="/weather" element={<Weather />} />
 
-            <Route path="/posts/:id" element={<SinglePost />} />
+            <Route path="/singlepost" element={<SinglePost />} />
           </Routes>
         </Router>
       </ApolloProvider>

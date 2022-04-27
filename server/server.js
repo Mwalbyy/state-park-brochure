@@ -4,6 +4,7 @@ const path = require('path');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+const { graphqlUploadExpress } = require('graphql-upload');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -27,6 +28,9 @@ app.get('/', (req, res) => {
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
+
+  app.use(graphqlUploadExpress());
+
   server.applyMiddleware({ app });
   
   db.once('open', () => {
