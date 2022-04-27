@@ -15,11 +15,6 @@ const postSchema = new Schema ({
     required: true,
     trim: true,
   },
-  postImage: {
-    type: String,
-    required: 'You must include an image',
-    trim: true,
-  },
   createdAt: {
     type: Date,
     default: Date.now,
