@@ -2,7 +2,6 @@ import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
-import topo from "./images/topo.PNG";
 import toporeal from "./images/toporeal.PNG";
 import Navbar from "../../Navbar";
 import { Card } from "react-bootstrap";
@@ -106,7 +105,7 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory">
+              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory" target={'_blank'}>
                 All Trails
               </Card.Link>
             </Card.Body>

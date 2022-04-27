@@ -32,7 +32,7 @@ export default function Weather() {
   useEffect(() => {
     getWeatherData()
     
-  }, [])
+  }, )
   return (
     <div>
       {forecastData.map((singleDay) => {
