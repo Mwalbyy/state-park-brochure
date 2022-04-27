@@ -11,6 +11,7 @@ export default function Portfolio() {
 
   const renderPage = () => {
     if (currentPage === "Home") return <Home />;
+    if (currentPage === "SinglePost") return <SinglePost />;
     if (currentPage === "Profile") return <Profile />;
     if (currentPage === "Posts") return <Posts />;
     if (currentPage === "Weather") return <Weather />;

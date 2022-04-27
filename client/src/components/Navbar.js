@@ -16,7 +16,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
       >
         <Container>
           <Navbar.Brand
-            href="#home"
+          
             onClick={() => handlePageChange("Home")}
             className={
               currentPage === "Home"
@@ -61,6 +61,17 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 }
               >
                 Weather
+              </Nav.Link>
+              <Nav.Link
+               
+                onClick={() => handlePageChange("SinglePost")}
+                className={
+                  currentPage === "SinglePost"
+                    ? "nav-link active navText"
+                    : "nav-link navText"
+                }
+              >
+                SinglePost
               </Nav.Link>
             </Nav>
             <Nav>
