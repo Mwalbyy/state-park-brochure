@@ -3,7 +3,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
 import topo from "./images/topo.PNG";
-import Navbar from "../../Navbar"
 // import topoLink from "https://react-spring.io/components/parallax#parallax"
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
   };
   return (
     <>
-      <Navbar/>
       <Parallax pages={8}>
         {/* Cover page */}
         <ParallaxLayer

@@ -4,11 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LinkContainer } from "react-router-bootstrap";
+import Auth from '../utils/auth'
 
 export default function Navigation({ currentPage, handlePageChange }) {
   return (
     <>
-      <Navbar
+       <Navbar
         collapseOnSelect
         expand="lg"
         bg="dark"
@@ -66,6 +67,15 @@ export default function Navigation({ currentPage, handlePageChange }) {
               </LinkContainer>
             </Nav>
             <Nav>
+              <LinkContainer to="/login">
+                <Nav.Link
+                  className={
+                    currentPage === "Login"
+                      ? "nav-link active navText"
+                      : "nav-link navText"
+                  }
+                >Login</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/profile">
                 <Nav.Link
                   className={
@@ -74,8 +84,20 @@ export default function Navigation({ currentPage, handlePageChange }) {
                       : "nav-link navText"
                   }
                 >
+                  
+                  
+                  {Auth.getProfile().data.username}'s profile
                   <i className="fa-solid fa-user fa-2xl"></i>
                 </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/signup">
+                <Nav.Link
+                  className={
+                    currentPage === "Signup"
+                      ? "nav-link active navText"
+                      : "nav-link navText"
+                  }
+                >Signup</Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>
