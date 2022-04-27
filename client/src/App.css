@@ -4,6 +4,60 @@
 }
 
 body {
-  color: #ffffff;
+  overflow: hidden;
+}
+
+.F-1 {
+  font-size: 2.5vw;
+}
+
+.F-2 {
+  font-size: 5vw;
+}
+
+.F-3 {
+  font-size: 7.5vw;
+}
+
+.F-4 {
+  font-size: 10vw;
+}
+
+.parkName {
+  margin-top: 10rem;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+}
+
+.cardText {
+  text-align: center;
+  color: white;
+  background-color: #425256;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 5% 0 5%;
+}
+
+.centerClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weatherH1 {
+  color: black;
+}
+
+.pastPicture {
+  max-width: 40%;
+  max-height: 20%;
 }
 /*# sourceMappingURL=App.css.map */
