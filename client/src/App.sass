@@ -35,7 +35,7 @@ body
 
 @for $i from 1 through 4
     .F-#{$i}
-        font-size: 3em * $i
+        font-size: 2.5vw * $i
 
 // =======================
 // Navigation
@@ -45,10 +45,8 @@ body
 // Parrelex
 // =======================
 .parkName
-    @include centerText
     margin-top: 10rem
-    background-color: black
-    width: fit-content
+
 
 .heading
     @include centerText
@@ -58,7 +56,7 @@ body
     background-color: $light-bg
     padding: 1rem
     border-radius: 10px
-    width: 40%
+    margin: 0 5% 0 5% 
 
 .centerClass
     @include centerDiv
@@ -66,6 +64,10 @@ body
     
 .weatherH1
     color: black
+    
+.pastPicture
+        max-width: 40%
+        max-height: 20%
 // =======================
 // Description
 // =======================
