@@ -55,7 +55,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, } from '@a
 
             <Route path="/weather" element={<Weather />} />
 
-            <Route path="/post/:id" element={<SinglePost />} />
+            <Route path="/singlepost" element={<SinglePost />} />
           </Routes>
         </Router>
       </ApolloProvider>

@@ -1,0 +1,26 @@
+.singlePost{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    flex-wrap: wrap;
+}
+
+.commentBtn{
+    display: flex;
+    justify-content: center;
+}
+
+.commentBox{
+    margin-left: 10px;
+}
+
+.commentHeader{
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.editPostBtn{
+    padding-top: 10px;
+}
