@@ -3,28 +3,15 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
 import pastPic from "./images/history1.jpg";
 import topo from "./images/topo.PNG";
-import Navbar from "../../Navbar"
+import toporeal from "./images/toporeal.PNG";
+import Navbar from "../../Navbar";
+import { Card } from "react-bootstrap";
 // import topoLink from "https://react-spring.io/components/parallax#parallax"
 
 export default function Home() {
-  const center = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-  const alignCenterLeft = {
-    display: "flex",
-    justifyContent: "center",
-  };
-  const alignCenterRight = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    marginRight: "5%",
-  };
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Parallax pages={8}>
         {/* Cover page */}
         <ParallaxLayer
@@ -51,7 +38,7 @@ export default function Home() {
         <ParallaxLayer
           speed={0.5}
           offset={1.1}
-          sticky={{ start: 1.1, end: 1.9 }}
+          sticky={{ start: 1.1, end: 1.6 }}
         >
           <h1 className="heading F-3"> brief History</h1>
         </ParallaxLayer>
@@ -60,8 +47,9 @@ export default function Home() {
           speed={2}
           offset={2.3}
           factor={3}
-          sticky={{ start: 1.3, end: 1.9 }}
-          style={{ ...center }}
+          sticky={{ start: 1.3, end: 1.6 }}
+          className="center"
+          // style={{ ...center }}
         >
           <h1 className="cardText F-2 ">
             This is an example text box so that I can do sizing when I actually
@@ -69,12 +57,22 @@ export default function Home() {
           </h1>
         </ParallaxLayer>
         {/* Double History cards */}
+        {/* image of past */}
+        <ParallaxLayer
+          speed={0.1}
+          offset={2.4}
+          factor={3}
+          className="centerLeft"
+        >
+          <img className="pastPicture" src={pastPic} alt="forest in the past" />
+        </ParallaxLayer>
+        {/* description of the image */}
         <ParallaxLayer
           speed={2}
           offset={2.3}
           factor={3}
-          sticky={{ start: 2.6, end: 3.2 }}
-          style={{ ...alignCenterRight }}
+          sticky={{ start: 2.8, end: 3.2 }}
+          className="centerRight"
         >
           <h1 className="cardText F-2 ">
             This is a picture of some people logging, so sad I know, dont worry
@@ -82,40 +80,48 @@ export default function Home() {
           </h1>
         </ParallaxLayer>
         <ParallaxLayer
-          speed={3}
-          offset={2.3}
-          factor={3}
-          sticky={{ start: 2.6, end: 3.2 }}
-          style={{ ...alignCenterLeft }}
-
-        >
-          <img
-            className="pastPicture"
-            src={pastPic}
-            alt="forest in the past"
-          />
-        </ParallaxLayer>
-        <ParallaxLayer
           speed={1}
           offset={4}
           factor={5}
           style={{ backgroundColor: "#227B69" }}
         ></ParallaxLayer>
-        <ParallaxLayer speed={0.5} offset={4.2} sticky={{ start: 4.2, end: 5 }}>
+        <ParallaxLayer speed={0.2} offset={4.2} sticky={{ start: 4.2, end: 5 }}>
           <h1 className="heading F-3">Topography</h1>
         </ParallaxLayer>
         <ParallaxLayer
-          speed={2}
+          speed={1}
           offset={4.5}
           factor={3}
           sticky={{ start: 4.5, end: 5.5 }}
-          style={{ ...center }}
+          className="centerStart"
         >
-          <a href={"https://react-spring.io/components/parallax#parallax"} target={"_blank"} rel={"noreferrer"}>
-          <img
-            src={topo}
-            alt=" forest in the past"
-          />
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={toporeal} />
+            <Card.Body>
+              <Card.Title>Trails</Card.Title>
+              <Card.Text>
+                The interstate parkway provides a variety of trails for people to enjoy
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory">All Trails</Card.Link>
+            </Card.Body>
+          </Card>
+          
+        </ParallaxLayer>
+        <ParallaxLayer
+          speed={1}
+          offset={4.5}
+          factor={3}
+          sticky={{ start: 4.5, end: 5.5 }}
+          className="centerRight"
+        >
+          <a
+            href={"https://react-spring.io/components/parallax#parallax"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <img src={topo} alt="" />
           </a>
         </ParallaxLayer>
         <ParallaxLayer

@@ -36,6 +36,9 @@ body
 @for $i from 1 through 4
     .F-#{$i}
         font-size: 2.5vw * $i
+@mixin flexALNC
+    display: flex
+    align-items: center
 
 // =======================
 // Navigation
@@ -47,6 +50,22 @@ body
 .parkName
     margin-top: 10rem
 
+.center
+    @include flexALNC
+    justify-content: center
+
+.centerLeft
+    display: flex
+    justify-content: center
+
+.centerRight
+    @include flexALNC
+    justify-content: flex-end
+    margin-right: 5% 
+.centerStart
+    @include flexALNC
+    justify-content: flex-start
+    margin-left: 5% 
 
 .heading
     @include centerText
@@ -56,17 +75,22 @@ body
     background-color: $light-bg
     padding: 1rem
     border-radius: 10px
-    margin: 0 5% 0 5% 
+    margin: 0 5% 0 5%
 
 .centerClass
     @include centerDiv
     justify-content: center
-    
+
 .weatherH1
     color: black
-    
+
 .pastPicture
-        max-width: 40%
+    max-width: 60%
+    max-height: 20%
+
+@media only screen and (max-width: 600px)
+    .pastPicture
+        max-width: 90%
         max-height: 20%
 // =======================
 // Description
