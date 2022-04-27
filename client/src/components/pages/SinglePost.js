@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from 'react-bootstrap/Modal';
 import forest from "./home/images/definitlyNJ.jpg";
-import './singlepost.css'
 import Navbar from "../Navbar"
 
 // const deleteBtn = document.querySelector('.deleteBtn');

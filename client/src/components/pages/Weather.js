@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import WeatherCard from '../WeatherCard'
-
+import Navbar from '../Navbar'
 
 export default function Weather() {
-  const APIKey = "eeb5a4f4f32c1f7a190544a866cbdd0c"
+  const APIKey = "c9648bd67b02cb074a8cff7f4418e8ec"
   
   const [forecastData, setForecastData] = useState([])
 
@@ -32,9 +32,10 @@ export default function Weather() {
   useEffect(() => {
     getWeatherData()
     
-  }, )
+  },[])
   return (
     <>
+    <Navbar/>
       {forecastData.map((singleDay) => {
         return <WeatherCard weather={singleDay} key={singleDay.key}/>
       })}

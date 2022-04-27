@@ -3,7 +3,7 @@
 // 0. Global
 // 1. Navigation
 // 2. Parrelex 
-// 3. Description
+// 3. Single Post
 // 4. History
 // =======================
 
@@ -24,6 +24,10 @@ $colors: $dark-bg,$light-bg,$light-text,$orange-text,$tan-text
 
 body
     overflow: hidden
+
+@mixin flexCenter
+    display: flex
+    justify-content: center
 
 @mixin centerText
     text-align: center
@@ -108,8 +112,30 @@ body
 
 
 // =======================
-// Description
+// Single Post
 // =======================
+
+.singlePost
+    @include flexCenter
+    padding-top: 80px
+    flex-wrap: wrap
+
+.commentBtn
+    @include flexCenter
+
+
+.commentBox
+    margin-left: 10px
+
+
+.commentHeader
+    text-align: center
+    color: white
+    padding-top: 15px
+    width: 100%
+
+.editPostBtn
+    padding-top: 10px
 
 // =======================
 // History

@@ -138,4 +138,40 @@ body {
     margin-left: 55%;
   }
 }
+
+.singlePost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 80px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.commentBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.commentBox {
+  margin-left: 10px;
+}
+
+.commentHeader {
+  text-align: center;
+  color: white;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.editPostBtn {
+  padding-top: 10px;
+}
 /*# sourceMappingURL=App.css.map */
