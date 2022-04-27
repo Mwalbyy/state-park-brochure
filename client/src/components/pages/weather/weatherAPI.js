@@ -1,21 +1,14 @@
-import React, { useContext } from "react"
 
-export const forecast = React.createContext();
-export const fiveDay = () => useContext()
+
+
 
 const APIKey = "eeb5a4f4f32c1f7a190544a866cbdd0c"
+let weatherURL = "https://api.openweathermap.org/";
 
-let searchBtn = document.querySelector(".searchBtn")
 let currentWeatherEl = document.querySelector("#current-weather")
 let fiveDayForecastEl = document.querySelector("#five-day-forecast")
 
 
-let windspeed = weather.wind_speed
-let icon = weather.weather[0].icon
-let image = "http://openweathermap.org/img/w/" + icon + ".png";
-let tempF = weather.temp
-let humidity = weather.humidity
-let UvIndex = weather.uvi
 
 function renderCurrentWeather(weather) {
 
@@ -41,7 +34,7 @@ function renderCurrentWeather(weather) {
       cardUvIndex.classList.add("uv-high")
     }
 
-    cardDate.textContent = moment().format("MM/DD/YYYY");
+    // cardDate.textContent = moment().format("MM/DD/YYYY");
     cardTemp.textContent = "Current Temperature: " + tempF + " Degrees Farenheit"
     cardWind.textContent = "Current Windspeed: " + windspeed + " mph"
     cardHumidity.textContent = "Current Humidity: " + humidity + "%"
@@ -72,7 +65,7 @@ function renderForecast(forecast) {
       let cardWind = document.createElement("p")
       let cardHumidity = document.createElement("p")
   
-      cardDate.textContent = moment.unix(date).format("MM/DD/YYYY");
+      // cardDate.textContent = moment.unix(date).format("MM/DD/YYYY");
       cardTemp.textContent = "Temperature: " + tempF + "Deg"
       cardWind.textContent = "Windspeed: " + wind + " mph"
       cardHumidity.textContent = "Humidity: " + humidity + "%"
@@ -91,7 +84,7 @@ function renderWeather(city, data) {
 
   function fetchWeather(location) {
     let city = location.name
-    let apiurl = `${weatherURL}data/2.5/onecall?lat=40.8482°N&lon=73.9976°W&units=imperial&exclude=minutely,hourly&appid=${APIKEY}`;
+    let apiurl = `${weatherURL}data/2.5/onecall?lat=40.8482°N&lon=73.9976°W&units=imperial&exclude=minutely,hourly&appid=${APIKey}`;
     
     fetch(apiurl)
       .then(function (response) {
@@ -107,3 +100,5 @@ function renderWeather(city, data) {
       });
   
   }
+
+fetchWeather([0])
