@@ -1,26 +1,13 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import forest from "./images/definitlyNJ.jpg";
-import pastPic from "./images/history1.jpg";
-import topo from "./images/topo.PNG";
-// import topoLink from "https://react-spring.io/components/parallax#parallax"
+import pastPic from "./images/pastPic.jpg";
+import topographyReal from "./images/topographyReal.PNG";
+import { Card } from "react-bootstrap";
+// import topographyLink from "https://react-spring.io/components/parallax#parallax"
+// https://earth.google.com/web/@40.98667028,-73.9053768,38.22883411a,2295.25763915d,35y,-77.59128487h,65.92113942t,-0r
 
 export default function Home() {
-  const center = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-  const alignCenterLeft = {
-    display: "flex",
-    justifyContent: "center",
-  };
-  const alignCenterRight = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    marginRight: "5%",
-  };
   return (
     <>
       <Parallax pages={8}>
@@ -35,7 +22,7 @@ export default function Home() {
           }}
         >
           <ParallaxLayer speed={0.5}>
-            <h1 className="centerClass F-3">New Jersey Cedar reserve </h1>
+            <h1 className="centerClass F-3">Palisades Interstate Park</h1>
           </ParallaxLayer>
         </ParallaxLayer>
         {/* backGround for the history section */}
@@ -45,76 +32,117 @@ export default function Home() {
           factor={6}
           style={{ backgroundColor: "#162529" }}
         ></ParallaxLayer>
-        {/* Title of history section */}
+        {/* Title of about section */}
         <ParallaxLayer
           speed={0.5}
           offset={1.1}
-          sticky={{ start: 1.1, end: 1.9 }}
+          sticky={{ start: 1.1, end: 1.6 }}
         >
-          <h1 className="heading F-3"> brief History</h1>
+          <h1 className="heading F-3">About</h1>
         </ParallaxLayer>
         {/* single History card */}
         <ParallaxLayer
           speed={2}
           offset={2.3}
           factor={3}
-          sticky={{ start: 1.3, end: 1.9 }}
-          style={{ ...center }}
+          sticky={{ start: 1.3, end: 1.6 }}
+          className="center"
+          // style={{ ...center }}
         >
           <h1 className="cardText F-2 ">
-            This is an example text box so that I can do sizing when I actually
-            fill this out{" "}
+            The Palisades Interstate Park in New Jersey is about twelve miles
+            long and half a mile wide, with 2,500 acres of wild Hudson River
+            shorefront, uplands, and cliffs
           </h1>
         </ParallaxLayer>
         {/* Double History cards */}
+        {/* image of past */}
+        <ParallaxLayer
+          speed={0.1}
+          offset={2.4}
+          factor={3}
+          className="centerLeft"
+        >
+          <img className="pastPicture" src={pastPic} alt="forest in the past" />
+        </ParallaxLayer>
+        {/* description of the image */}
         <ParallaxLayer
           speed={2}
           offset={2.3}
           factor={3}
-          sticky={{ start: 2.6, end: 3.2 }}
-          style={{ ...alignCenterRight }}
+          sticky={{ start: 2.8, end: 3.2 }}
+          className="centerRight"
         >
           <h1 className="cardText F-2 ">
             This is a picture of some people logging, so sad I know, dont worry
             tho they are gonna stop because I asked them nicely
           </h1>
         </ParallaxLayer>
-        <ParallaxLayer
-          speed={3}
-          offset={2.3}
-          factor={3}
-          sticky={{ start: 2.6, end: 3.2 }}
-          style={{ ...alignCenterLeft }}
-
-        >
-          <img
-            className="pastPicture"
-            src={pastPic}
-            alt="forest in the past"
-          />
-        </ParallaxLayer>
+        {/* background for topography section */}
         <ParallaxLayer
           speed={1}
           offset={4}
           factor={5}
           style={{ backgroundColor: "#227B69" }}
         ></ParallaxLayer>
-        <ParallaxLayer speed={0.5} offset={4.2} sticky={{ start: 4.2, end: 5 }}>
+        <ParallaxLayer speed={0.2} offset={4.2} sticky={{ start: 4.2, end: 5 }}>
           <h1 className="heading F-3">Topography</h1>
         </ParallaxLayer>
         <ParallaxLayer
-          speed={2}
+          speed={1}
           offset={4.5}
           factor={3}
           sticky={{ start: 4.5, end: 5.5 }}
-          style={{ ...center }}
+          className="centerStart"
         >
-          <a href={"https://react-spring.io/components/parallax#parallax"} target={"_blank"} rel={"noreferrer"}>
-          <img
-            src={topo}
-            alt=" forest in the past"
-          />
-          </a>
+          <Card className="cardTopoLong">
+            <Card.Img variant="top" src={topographyReal} />
+            <Card.Body>
+              <Card.Title>Trails</Card.Title>
+              <Card.Text>
+                The interstate parkway provides a variety of trails for people
+                to enjoy
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link
+                href="https://www.alltrails.com/trail/us/new-jersey/long-path-gw-bridge-to-lamont-doherty-earth-observatory"
+                target={"_blank"}
+              >
+                All Trails
+              </Card.Link>
+            </Card.Body>
+          </Card>
+        </ParallaxLayer>
+        <ParallaxLayer
+          speed={1}
+          offset={4.5}
+          factor={3}
+          sticky={{ start: 4.5, end: 5.5 }}
+          className="centerRightCard"
+        >
+          <Card className="cardTopoStub">
+            <Card.Body>
+              <Card.Title className="F-3">Card Title</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                New Jersey{" "}
+              </Card.Subtitle>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+
+          {/* <a
+            href={"https://react-spring.io/components/parallax#parallax"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <img src={topo} alt="" />
+          </a> */}
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
