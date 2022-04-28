@@ -7,6 +7,10 @@ import { LinkContainer } from "react-router-bootstrap";
 import Auth from "../utils/auth";
 
 export default function Navigation({ currentPage, handlePageChange }) {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
     <>
       <Navbar
@@ -78,7 +82,14 @@ export default function Navigation({ currentPage, handlePageChange }) {
             </Nav>
             <Nav>
               {Auth.loggedIn() ? (
+                <>
                 <LoggedIn currentPage={currentPage} />
+                <LinkContainer to="/">
+                  <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                  Logout
+                  </button>
+                </LinkContainer>
+                </>
               ) : (
                 <>
                   <LoginComp currentPage={currentPage} />
@@ -94,10 +105,10 @@ export default function Navigation({ currentPage, handlePageChange }) {
 }
 
 
-
+// Components for the login in navbar
 function LoggedIn({ currentPage }) {
   return (
-    <LinkContainer to="/profile">
+    <LinkContainer to={`/profile/${Auth.getProfile().data.username}`}>
       <Nav.Link
         className={
           currentPage === "Profile"

@@ -45,9 +45,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, } from '@a
 
             <Route path="/login" element={<Login />}/>
 
-            <Route path="/me" element={<Profile />}/>
-
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/:username" element={<Profile />} />
 
             <Route path="/signup" element={<Signup />}/>
 
@@ -55,7 +53,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, } from '@a
 
             <Route path="/weather" element={<Weather />} />
 
-            <Route path="/singlepost" element={<SinglePost />} />
+            <Route path="/singlePost/:id" element={<SinglePost />} />
           </Routes>
         </Router>
       </ApolloProvider>
