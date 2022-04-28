@@ -1,6 +1,9 @@
 import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
+
+
 
 import { QUERY_USER, QUERY_ME } from '../../../utils/queries';
 
@@ -8,22 +11,22 @@ import Auth from '../../../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();
+  console.log("userParam", userParam)
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
+  console.log("data", data)
+
 
   const user = data?.me || data?.user || {};
   // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to="/me" />;
-  }
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
+  if (!Auth.loggedIn()) {
     console.log(data);
     return (
       <>
@@ -35,16 +38,39 @@ const Profile = () => {
     );
   }
 
+  const postList = user?.posts || [];
+  
   return (
     <>
     <div>
       <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
+        <h3>
+
+          Viewing {Auth.getProfile().data.username}'s profile.
+          
+        </h3>
+        {console.log(Auth.getProfile().data)}
 
         <div className="col-12 col-md-10 mb-5">
+          {user.username}
           
+            <ul className='square'>
+            {postList.map((post) => {
+              return (
+              <li className='postList' key={post._id}>
+                {console.log(post._id)}
+                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/post/${post._id}`}>
+                      {post.postText}
+                      {console.log(post.postText)}
+                      <br></br>
+                      <br></br> 
+                      
+                      </Link>
+                      By: {post.postAuthor}
+              </li>
+            )
+          })}
+          </ul>
         </div>
         {!userParam && (
           <div
