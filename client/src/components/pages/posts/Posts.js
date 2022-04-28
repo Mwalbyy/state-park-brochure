@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import React from 'react'
 import { QUERY_POSTS } from '../../../utils/queries'
 import './style/Posts.css'
-import Navbar from "../../Navbar"
+import { Link } from 'react-router-dom';
 
 const Posts = () => {
   const { loading, data } = useQuery(QUERY_POSTS, {
@@ -11,12 +10,9 @@ const Posts = () => {
   });
 
   const postList = data?.posts || [];
-  console.log(postList);
-  console.log(data);
 
   return (
     <>
-    <Navbar/>
     <div className='container'>
       <h1 className='posth1'>Welcome to the Posts Page</h1>
       <button className='addBtn'>Add Post</button>
@@ -29,9 +25,12 @@ const Posts = () => {
               {postList.map((post) => {
                 return (
                   <li className='postList' key={post._id}>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to={`/post/${post._id}`}>
                     {post.postText}
                      <br></br>
                      <br></br> 
+                     
+                     </Link>
                      By: {post.postAuthor}
                   </li>
                 )
