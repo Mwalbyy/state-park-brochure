@@ -1,25 +1,36 @@
 import React from "react";
 import {Card} from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css";
+import '../weather.css'
+
 export default function WeatherCard (props) {
+    <div>
+    <Card
+        img="http://openweathermap.org/img/w/04d.png"
+        />
+        </div>
+    const center = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        
+      };
+
     return (
-        <Card style={{ width: '18rem' }}>
+        
+        <Card 
+        className="wrapper"
+        style={{ width: '12rem' }}
+        
+        >
   <Card.Body>
-    <Card.Title>Daily Forecast</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">{props.weather.temp} Degrees F</Card.Subtitle>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
+    <Card.Title>{props.weather.temp} Degrees F</Card.Title>
+        <img src={props.weather.picture}/>
+    <Card.Text>{props.weather.description}</Card.Text>
+    <Card.Text>{props.weather.humidity}% humidity</Card.Text>
     
   </Card.Body>
 </Card>
 
-    //     <div>
-    //         <p>{props.weather.temp}</p>
-    //         <p>{props.weather.description}</p>
-    //         <p>{props.weather.humidity}</p>
-    //         <p></p>
-    //         <p></p>
-    //     </div>
     )
 }

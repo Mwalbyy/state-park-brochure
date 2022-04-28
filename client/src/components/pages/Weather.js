@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import WeatherCard from '../WeatherCard'
+import Navbar from '../Navbar'
 
 
 export default function Weather() {
@@ -34,11 +35,12 @@ export default function Weather() {
     
   }, [])
   return (
-    <div>
+    <>
+    <Navbar/>
       {forecastData.map((singleDay) => {
         return <WeatherCard weather={singleDay} key={singleDay.key}/>
       })}
-    </div> 
+    </> 
   )
 }
 
