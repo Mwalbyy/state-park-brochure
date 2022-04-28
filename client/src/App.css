@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow: hidden;
+  background-color: black;
 }
 
 .F-1 {
@@ -173,5 +173,36 @@ body {
 
 .editPostBtn {
   padding-top: 10px;
+}
+
+.postsHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.postPageCont {
+  background-color: #30424D;
+  height: 100vh;
+}
+
+.postsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.imgSize {
+  aspect-ratio: auto;
+  width: 80%;
 }
 /*# sourceMappingURL=App.css.map */
