@@ -151,15 +151,6 @@ body {
       flex-wrap: wrap;
 }
 
-.commentBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .commentBox {
   margin-left: 10px;
 }
