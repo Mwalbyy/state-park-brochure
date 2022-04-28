@@ -2,9 +2,16 @@ body{
     background-color: #425256;
 }
 
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 3rem));
-    gap: 1rem;
-    justify-content: center;
+.card{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    
 }
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+

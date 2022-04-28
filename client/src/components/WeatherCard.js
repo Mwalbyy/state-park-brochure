@@ -1,36 +1,57 @@
 import React from "react";
-import {Card} from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../weather.css'
 
-export default function WeatherCard (props) {
-    <div>
-    <Card
-        img="http://openweathermap.org/img/w/04d.png"
-        />
-        </div>
-    const center = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        
-      };
+export default function WeatherCard(props) {
 
     return (
-        
-        <Card 
-        className="wrapper"
-        style={{ width: '12rem' }}
-        
-        >
-  <Card.Body>
-    <Card.Title>{props.weather.temp} Degrees F</Card.Title>
-        <img src={props.weather.picture}/>
-    <Card.Text>{props.weather.description}</Card.Text>
-    <Card.Text>{props.weather.humidity}% humidity</Card.Text>
-    
-  </Card.Body>
-</Card>
+        <div className="commentForm">
+        <Card
 
+            className=""
+            style={{
+                width: '12rem',
+                display: 'flex',
+            }}
+            
+
+        >
+            <Card.Body
+                className=""
+                style={{}}
+            >
+                <Card.Title>{props.weather.dt}</Card.Title>
+                <Card.Text>{props.weather.temp} Degrees F</Card.Text>
+                <img src={`http://openweathermap.org/img/w/${props.weather.picture}.png`} alt="icon"></img>
+                <Card.Text>{props.weather.description}</Card.Text>
+                <Card.Text>Humidity {props.weather.humidity}%</Card.Text>
+
+            </Card.Body>
+        </Card>
+
+        <Card
+        
+        className=""
+        style={{
+            width: '12rem',
+            display: 'flex',
+        }}
+        >
+         <Card.Body
+                className=""
+                style={{}}
+            >
+                <Card.Title>{props.weather.dt}</Card.Title>
+                <Card.Text>{props.weather.temp} Degrees F</Card.Text>
+                <img src={`http://openweathermap.org/img/w/${props.weather.picture}.png`} alt="icon"></img>
+                <Card.Text>{props.weather.description}</Card.Text>
+                <Card.Text>Humidity {props.weather.humidity}%</Card.Text>
+
+            </Card.Body>
+            
+        
+        </Card>
+        </div>
     )
 }
