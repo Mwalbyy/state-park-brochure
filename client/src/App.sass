@@ -4,7 +4,7 @@
 // 1. Navigation
 // 2. Parrelex 
 // 3. Single Post
-// 4. History
+// 4. Posts
 // =======================
 
 // =======================
@@ -23,8 +23,9 @@ $colors: $dark-bg,$light-bg,$light-text,$orange-text,$tan-text
     padding: 0
 
 body
-    overflow: hidden
-
+    // overflow: hidden
+    background-color: black
+    
 @mixin flexCenter
     display: flex
     justify-content: center
@@ -142,5 +143,16 @@ body
     
 
 // =======================
-// History
+// Posts
 // =======================
+.postsHeader
+    @include flexCenter
+.postPageCont
+    background-color: #30424D
+    height: 100vh
+.postsContainer
+    @include centerDiv
+    flex-direction: column
+.imgSize
+    aspect-ratio: auto
+    width: 80%
