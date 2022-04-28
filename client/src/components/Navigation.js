@@ -4,12 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LinkContainer } from "react-router-bootstrap";
-import Auth from '../utils/auth'
+import Auth from "../utils/auth";
 
 export default function Navigation({ currentPage, handlePageChange }) {
   return (
     <>
-       <Navbar
+      <Navbar
         collapseOnSelect
         expand="lg"
         bg="dark"
@@ -43,7 +43,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/posts">
-
                 <Nav.Link
                   className={
                     currentPage === "Posts"
@@ -55,7 +54,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/singlepost">
-
                 <Nav.Link
                   className={
                     currentPage === "SinglePost"
@@ -79,42 +77,69 @@ export default function Navigation({ currentPage, handlePageChange }) {
               </LinkContainer>
             </Nav>
             <Nav>
-              <LinkContainer to="/login">
-                <Nav.Link
-                  className={
-                    currentPage === "Login"
-                      ? "nav-link active navText"
-                      : "nav-link navText"
-                  }
-                >Login</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/profile">
-                <Nav.Link
-                  className={
-                    currentPage === "Profile"
-                      ? "nav-link active navText"
-                      : "nav-link navText"
-                  }
-                >
-                  
-                  
-                  {Auth.getProfile().data.username}'s profile
-                  <i className="fa-solid fa-user fa-2xl"></i>
-                </Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/signup">
-                <Nav.Link
-                  className={
-                    currentPage === "Signup"
-                      ? "nav-link active navText"
-                      : "nav-link navText"
-                  }
-                >Signup</Nav.Link>
-              </LinkContainer>
+              {Auth.loggedIn() ? (
+                <LoggedIn currentPage={currentPage} />
+              ) : (
+                <>
+                  <LoginComp currentPage={currentPage} />
+                  <SignUpComp currentPage={currentPage} />
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
+  );
+}
+
+
+
+function LoggedIn({ currentPage }) {
+  return (
+    <LinkContainer to="/profile">
+      <Nav.Link
+        className={
+          currentPage === "Profile"
+            ? "nav-link active navText"
+            : "nav-link navText"
+        }
+      >
+        {Auth.getProfile().data.username}'s profile
+        <i className="fa-solid fa-user fa-2xl"></i>
+      </Nav.Link>
+    </LinkContainer>
+  );
+}
+
+function LoginComp({ currentPage }) {
+  return (
+    <LinkContainer to="/login">
+      <Nav.Link
+        className={
+          currentPage === "Login"
+            ? "nav-link active navText"
+            : "nav-link navText"
+        }
+      >
+        Login
+      </Nav.Link>
+    </LinkContainer>
+  );
+}
+
+function SignUpComp({ currentPage }) {
+  return (
+    <LinkContainer to="/signup">
+      <Nav.Link
+        className={
+          currentPage === "Signup"
+            ? "nav-link active navText"
+            : "nav-link navText"
+        }
+      >
+        Signup
+      </Nav.Link>
+    </LinkContainer>
   );
 }

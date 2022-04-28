@@ -40,6 +40,3 @@ export default function Weather() {
     </> 
   )
 }
-
-
-
