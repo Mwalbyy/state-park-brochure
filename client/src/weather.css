@@ -1,12 +1,8 @@
-body{
-    background-color: #425256;
-}
 
-.card{
+.card {
     display: flex;
     justify-content: space-between;
     background-color: lightgray;
-    
 }
 
 img {
@@ -14,4 +10,6 @@ img {
     width: 50px;
 }
 
-
+.Wcontainer{
+    display: flex;
+}

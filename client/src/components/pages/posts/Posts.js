@@ -1,7 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { QUERY_POSTS } from "../../../utils/queries";
-import "./style/Posts.css";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import test from "../home/images/history1.jpg";

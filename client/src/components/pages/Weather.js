@@ -35,12 +35,18 @@ export default function Weather() {
     
   }, [])
   return (
-    <>
+    <div style={{display: 'flex', justifyContent: 'space-around'}}>
     
       {forecastData.map((singleDay) => {
-        return <WeatherCard weather={singleDay} key={singleDay.key}/>
+        return (
+        <>
+        
+        <WeatherCard weather={singleDay} key={singleDay.key}/>
+        
+        </> 
+        )
       })}
-    </> 
+    </div> 
   )
 }
 
