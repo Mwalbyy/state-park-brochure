@@ -105,7 +105,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
 }
 
 
-
+// Components for the login in navbar
 function LoggedIn({ currentPage }) {
   return (
     <LinkContainer to={`/profile/${Auth.getProfile().data.username}`}>
