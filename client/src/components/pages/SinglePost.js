@@ -202,43 +202,4 @@ export default function SinglePost() {
   
 }
 
-function WriteComment({ handleShow, show, handleClose }) {
-  return (
-    <div className="commentForm">
-      <Form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="commentHeader fs-2">Comments</Form.Label>
-          <Form.Control type="comment" placeholder="Enter comment" />
-        </Form.Group>
 
-        {/* Add Comment Btn */}
-        <Button variant="primary" onClick={handleShow}>
-          Add Comment
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>Add Comment</Modal.Header>
-
-          {/* Edit Post TextArea */}
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows={2} />
-          </Form.Group>
-
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </Form>
-    </div>
-  );
-  
-}
