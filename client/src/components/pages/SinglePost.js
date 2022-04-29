@@ -220,23 +220,6 @@ function WriteComment({ handleShow, show, handleClose }) {
         <Button variant="primary" onClick={handleShow}>
           Add Comment
         </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>Add Comment</Modal.Header>
-
-          {/* Edit Post TextArea */}
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows={2} />
-          </Form.Group>
-
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save
-            </Button>
-          </Modal.Footer>
-        </Modal>
       </Form>
     </div>
   );
