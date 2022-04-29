@@ -3,7 +3,8 @@ import React from "react";
 import { QUERY_POSTS } from "../../../utils/queries";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-import test from "../home/images/history1.jpg";
+import postOne from "../home/images/postOne.jpg";
+import postTwo from "../home/images/postTwo.jpg";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const Posts = () => {
@@ -21,12 +22,12 @@ const Posts = () => {
         </ParallaxLayer>
         <ParallaxLayer offset={0.8} speed={1} factor={0} className="center ">
           <Link to={`/singlePost/1`}>
-            <Image src={test} className="img-fluid imgSize" />
+            <Image src={postOne} className="img-fluid imgSize" />
           </Link>
         </ParallaxLayer>
         <ParallaxLayer offset={1} speed={1} factor={0} className="center ">
           <Link to={`/singlePost/1`}>
-            <Image src={test} className="img-fluid imgSize" />
+            <Image src={postTwo} className="img-fluid imgSize" />
           </Link>
         </ParallaxLayer>
       </Parallax>
