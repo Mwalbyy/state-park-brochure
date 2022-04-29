@@ -153,6 +153,15 @@ body {
   .centerRightCard {
     margin-left: 55%;
   }
+  .spaceAround {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .singlePost {
@@ -199,6 +208,10 @@ body {
       justify-content: space-around;
 }
 
+.whiteText {
+  color: white;
+}
+
 .postsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,7 +234,36 @@ body {
   width: 80%;
 }
 
-.whiteText {
-  color: white;
+.weatherImg {
+  height: 50px;
+  width: 50px;
+}
+
+.Wcontainer {
+  margin-top: 150px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cardBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.spaceAround {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=App.css.map */
