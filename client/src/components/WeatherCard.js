@@ -12,7 +12,7 @@ export default function WeatherCard(props) {
         display: "flex",
       }}
     >
-      <Card.Body className="" style={{}}>
+      <Card.Body className="cardBody" style={{}}>
         <Card.Title>{props.weather.dt}</Card.Title>
         <Card.Text>{props.weather.temp} Degrees F</Card.Text>
         <img

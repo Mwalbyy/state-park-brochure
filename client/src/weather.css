@@ -1,9 +1,16 @@
-
-.card {
+.wrapper {
     display: flex;
-    justify-content: space-between;
-    background-color: lightgray;
+    flex-wrap: wrap;
 }
+.cardBody {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+/* @media only screen and(max-width:792px) 
+{
+    flex-direction: column;
+} */
 
 .weatherImg {
     height: 50px;
@@ -12,4 +19,9 @@
 
 .Wcontainer{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: lightgray;
+
 }
