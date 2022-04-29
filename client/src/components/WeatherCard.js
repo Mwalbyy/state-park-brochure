@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../weather.css";
 
 export default function WeatherCard(props) {
   return (

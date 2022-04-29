@@ -39,3 +39,42 @@ mutation addPost($postText: String!, $postAuthor: String!, $iamgeTag: String!) {
   }
 }
 `
+
+export const ADD_COMMENT = gql`
+mutation addComment($postId: ID!, $commentAuthor: String!, $commentText: String!) {
+  addComment(postId: $postId, commentAuthor: $commentAuthor, commentText: $commentText) {
+    _id
+    commentAuthor
+    commentText
+    createdAt
+  }
+}
+`
+
+export const REMOVE_POST = gql`
+mutation removePost($postId: ID!) {
+  removePost(postId: $postId) {
+    _id
+  }
+}
+`
+
+export const REMOVE_COMMENT = gql`
+mutation removeComment($postId: ID!, $commentId: ID!) {
+  removeComment(postId: $postId, commentId: $commentId) {
+    _id
+  }
+}
+`
+
+export const UPDATE_POST = gql`
+mutation updatePost($postId: ID!, $postText: String!) {
+  updatePost(postId: $postId, postText: $postText) {
+    _id
+    postText
+    postAuthor
+    imageTag
+    createdAt
+  }
+}
+`
