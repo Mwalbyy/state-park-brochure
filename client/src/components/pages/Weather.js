@@ -23,7 +23,7 @@ export default function Weather() {
     setForecastData(forecastArray)
   }
 
-  // change laty and long to state park location
+  // change lat and long to state park location
   let apiurl = `https://api.openweathermap.org/data/2.5/onecall?lat=40.8482&lon=73.9976&units=imperial&exclude=minutely,hourly&appid=${APIKey}`;
   async function getWeatherData () {
     const response = await fetch(apiurl)
