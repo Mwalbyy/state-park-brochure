@@ -74,8 +74,7 @@ export default function Home() {
           className="centerRight"
         >
           <h1 className="cardText F-2 ">
-            This is a picture of some people logging, so sad I know, dont worry
-            tho they are gonna stop because I asked them nicely
+          Palisade is derived from the same root as the word pole, ultimately from the Latin word palus, meaning stake. A "palisade" is, in general, a defensive fence or wall made up of wooden stakes or tree trunks.
           </h1>
         </ParallaxLayer>
         {/* background for topography section */}
@@ -123,26 +122,16 @@ export default function Home() {
         >
           <Card className="cardTopoStub">
             <Card.Body>
-              <Card.Title className="F-3">Card Title</Card.Title>
+              <Card.Title className="F-3">Palisades Interstate Parkway</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 New Jersey{" "}
               </Card.Subtitle>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Google earth provides you with an accurate representation of what the Palisades look like
               </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Link href="https://earth.google.com/web/@40.9870157,-73.90637425,116.55005094a,1005.26551458d,35y,-77.58230428h,65.91054926t,0r">Earth Link</Card.Link>
             </Card.Body>
           </Card>
-
-          {/* <a
-            href={"https://react-spring.io/components/parallax#parallax"}
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
-            <img src={topo} alt="" />
-          </a> */}
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
