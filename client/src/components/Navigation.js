@@ -29,7 +29,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
             }
           >
             <LinkContainer to="/">
-              <div>National Park </div>
+              <div className="N-2">Palisades</div>
             </LinkContainer>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -43,7 +43,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
                       : "nav-link navText"
                   }
                 >
-                  Home
+                  About
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/posts">
@@ -65,7 +65,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
                       : "nav-link navText"
                   }
                 >
-                  SinglePost
+                  TEMPsinglepostTEMP
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/weather">
@@ -151,7 +151,7 @@ function SignUpComp({ currentPage }) {
             : "nav-link navText"
         }
       >
-        Signup
+        Register
       </Nav.Link>
     </LinkContainer>
   );

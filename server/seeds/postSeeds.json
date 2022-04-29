@@ -6,14 +6,17 @@
     },
     {
       "postText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-      "postAuthor": "Max"
+      "postAuthor": "Max",
+      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
     },
     {
       "postText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-      "postAuthor": "Why"
+      "postAuthor": "Why",
+      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
     },
     {
       "postText": "I'm not a great programmer; I'm just a good programmer with great habits.",
-      "postAuthor": "Kent"
+      "postAuthor": "Kent",
+      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
     }
 ]
