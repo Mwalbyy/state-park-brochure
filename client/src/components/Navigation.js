@@ -83,12 +83,15 @@ export default function Navigation({ currentPage, handlePageChange }) {
             <Nav>
               {Auth.loggedIn() ? (
                 <>
-                <LoggedIn currentPage={currentPage} />
-                <LinkContainer to="/">
-                  <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                  Logout
-                  </button>
-                </LinkContainer>
+                  <LoggedIn currentPage={currentPage} />
+                  <LinkContainer to="/">
+                    <button
+                      className="btn btn-lg btn-light m-2"
+                      onClick={logout}
+                    >
+                      Logout
+                    </button>
+                  </LinkContainer>
                 </>
               ) : (
                 <>
@@ -103,7 +106,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
     </>
   );
 }
-
 
 // Components for the login in navbar
 function LoggedIn({ currentPage }) {
