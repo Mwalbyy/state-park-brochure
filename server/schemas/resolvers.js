@@ -27,7 +27,7 @@ const resolvers = {
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
-      return { token, user };
+      return await { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
@@ -78,6 +78,20 @@ const resolvers = {
         { new: true }
       );
     },
+    updatePost: async (parent, {postId, postText}) => {
+      return await Post.findOneAndUpdate(
+        { _id: postId },
+        { postText: postText },
+        { new: true }
+      )
+    },
+    // Update Comment Code iceboxed
+    // updateComment: async(parent, {postId, commentId, commentText}) => {
+    //   return await Post.findOneAndUpdate(
+    //     { _id: postId },
+    //     { }
+    //   )
+    // }
   },
 };
 
