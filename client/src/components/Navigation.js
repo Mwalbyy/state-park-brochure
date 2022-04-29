@@ -57,17 +57,6 @@ export default function Navigation({ currentPage, handlePageChange }) {
                   Posts
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/singlepost">
-                <Nav.Link
-                  className={
-                    currentPage === "SinglePost"
-                      ? "nav-link active navText"
-                      : "nav-link navText"
-                  }
-                >
-                  TEMPsinglepostTEMP
-                </Nav.Link>
-              </LinkContainer>
               <LinkContainer to="/weather">
                 <Nav.Link
                   className={
