@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react'
 import WeatherCard from '../WeatherCard'
 
 export default function Weather() {
-  const APIKey = "c9648bd67b02cb074a8cff7f4418e8ec"
+  const APIKey = "eeb5a4f4f32c1f7a190544a866cbdd0c"
   
   const [forecastData, setForecastData] = useState([])
 
   function renderForecast(forecast) {
     const forecastArray = []
+    console.log(forecast)
+    console.log(forecast.daily.dt)
     for (let i = 0; i < 5; i++) {
       const day = {
         key: i,
         temp: forecast.daily[i].temp.day,
         humidity: forecast.daily[i].humidity,
         description: forecast.daily[i].weather[0].main,
-        picture: forecast.daily[i].weather[0].icon
+        picture: forecast.daily[i].weather[0].icon,
       }
       forecastArray.push(day)
     }
@@ -31,12 +33,22 @@ export default function Weather() {
   useEffect(() => {
     getWeatherData()
     
-  },[])
+  }, [])
   return (
-    <>
+    <div style={{display: 'flex', justifyContent: 'space-around'}}>
+    
       {forecastData.map((singleDay) => {
-        return <WeatherCard weather={singleDay} key={singleDay.key}/>
+        return (
+        <>
+        
+        <WeatherCard weather={singleDay} key={singleDay.key}/>
+        
+        </> 
+        )
       })}
-    </> 
+    </div> 
   )
 }
+
+
+
