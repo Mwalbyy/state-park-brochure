@@ -23,6 +23,22 @@ body {
   font-size: 10vw;
 }
 
+.N-1 {
+  font-size: 1rem;
+}
+
+.N-2 {
+  font-size: 2rem;
+}
+
+.N-3 {
+  font-size: 3rem;
+}
+
+.N-4 {
+  font-size: 4rem;
+}
+
 .parkName {
   margin-top: 10rem;
 }

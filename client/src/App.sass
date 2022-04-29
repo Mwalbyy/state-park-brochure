@@ -26,7 +26,7 @@ $colors: $dark-bg,$light-bg,$light-text,$orange-text,$tan-text
 body
     // overflow: hidden
     background-color: black
-    
+
 @mixin flexCenter
     display: flex
     justify-content: center
@@ -42,6 +42,9 @@ body
 @for $i from 1 through 4
     .F-#{$i}
         font-size: 2.5vw * $i
+@for $i from 1 through 4
+    .N-#{$i}
+        font-size: 1rem * $i
 @mixin flexALNC
     display: flex
     align-items: center
@@ -66,15 +69,15 @@ body
 
 .centerRight
     @include flexALNC
-    margin-right: 15% 
+    margin-right: 15%
 .centerRightCard
     @include flexALNC
-    margin-left: 40% 
+    margin-left: 40%
 
 .centerStart
     @include flexALNC
     justify-content: flex-start
-    margin-left: 5% 
+    margin-left: 5%
 
 .heading
     @include centerText
@@ -110,8 +113,7 @@ body
     .cardTopoStub
         width: 40%
     .centerRightCard
-        margin-left: 55% 
-
+        margin-left: 55%
 
 // =======================
 // Single Post
@@ -140,8 +142,6 @@ body
 .commentBtns
     display: flex
     justify-content: space-around
-    
-    
 
 // =======================
 // Posts
