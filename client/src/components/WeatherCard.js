@@ -16,6 +16,7 @@ export default function WeatherCard(props) {
           <Card.Title>{props.weather.dt}</Card.Title>
           <Card.Text>{props.weather.temp} Degrees F</Card.Text>
           <img
+            className="weatherImg"
             src={`http://openweathermap.org/img/w/${props.weather.picture}.png`}
             alt="icon"
           ></img>
