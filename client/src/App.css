@@ -208,6 +208,10 @@ body {
       justify-content: space-around;
 }
 
+.whiteText {
+  color: white;
+}
+
 .postsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
