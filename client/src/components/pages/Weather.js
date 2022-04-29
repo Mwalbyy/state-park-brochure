@@ -9,9 +9,9 @@ export default function Weather() {
   const [forecastData, setForecastData] = useState([])
 
   function renderForecast(forecast) {
-    const forecastArray = []
-    console.log(forecast)
-    console.log(forecast.daily.dt)
+    const forecastArray = [];
+    console.log(forecast);
+    console.log(forecast.daily.dt);
     for (let i = 0; i < 5; i++) {
       const day = {
         key: i,
@@ -19,10 +19,10 @@ export default function Weather() {
         humidity: forecast.daily[i].humidity,
         description: forecast.daily[i].weather[0].main,
         picture: forecast.daily[i].weather[0].icon,
-      }
-      forecastArray.push(day)
+      };
+      forecastArray.push(day);
     }
-    setForecastData(forecastArray)
+    setForecastData(forecastArray);
   }
 
   // change lat and long to state park location
@@ -44,7 +44,7 @@ export default function Weather() {
     }}
 
     >
-      <div class="centerClass F-3">Five Day Forecast</div>
+      <h1 class="centerClass F-3">Five Day Forecast</h1>
       <div style={{
         display: 'flex',
         justifyContent: 'space-around',
@@ -53,9 +53,9 @@ export default function Weather() {
         {forecastData.map((singleDay) => {
           return (
             <>
-
-              <WeatherCard weather={singleDay} key={singleDay.key} />
-
+              <div className='wrapper'>
+                <WeatherCard weather={singleDay} key={singleDay.key} />
+              </div>
             </>
           )
         })}
@@ -63,6 +63,3 @@ export default function Weather() {
     </div>
   )
 }
-
-
-
