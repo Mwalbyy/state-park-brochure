@@ -13,6 +13,7 @@ const typeDefs = gql `
         _id: ID
         postText: String
         postAuthor: String
+        imageTag: String
         createdAt: String
         comments: [Comment]!
     }
@@ -48,6 +49,7 @@ const typeDefs = gql `
         addPost(
             postText: String!, 
             postAuthor: String!
+            iamgeTag: String
         ): Post
         addComment(
             postId: ID!
