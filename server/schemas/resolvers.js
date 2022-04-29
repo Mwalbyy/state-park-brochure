@@ -46,8 +46,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addPost: async (parent, { postText, postAuthor }) => {
-      const post = await Post.create({ postText, postAuthor });
+    addPost: async (parent, { postText, postAuthor, imageTag }) => {
+      const post = await Post.create({ postText, postAuthor, imageTag });
 
       await User.findOneAndUpdate(
         { username: postAuthor },
