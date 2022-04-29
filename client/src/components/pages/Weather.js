@@ -45,10 +45,7 @@ export default function Weather() {
 
     >
       <h1 class="centerClass F-3">Five Day Forecast</h1>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-      }}>
+      <div className='spaceAround'>
 
         {forecastData.map((singleDay) => {
           return (
