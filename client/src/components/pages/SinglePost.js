@@ -6,14 +6,32 @@ import Modal from "react-bootstrap/Modal";
 import forest from "./home/images/definitlyNJ.jpg";
 import Auth from "../../utils/auth";
 
+import { useParams } from 'react-router-dom';
+import { useQuery } from "@apollo/client";
+import { QUERY_SINGLE_POST } from "../../utils/queries"
+
 export default function SinglePost() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const { id } = useParams();
+
+  const { loading, data } = useQuery(QUERY_SINGLE_POST, {
+    variables: { postId: id }
+  });
+
+  const singlePost = data?.post || []
+  console.log(singlePost)
+
   return (
     <>
+    {loading ? <h1>loading</h1> :
+    <>
+      
+      
+      
       <div
         style={{
           height: "100vh",
@@ -25,13 +43,13 @@ export default function SinglePost() {
         <div className="singlePost">
           <div className="pt-3">
             <Card style={{ width: "22rem" }}>
-              <Card.Img variant="top" src={forest} />
+              <Card.Img variant="top" src={singlePost.imageTag} />
               <Card.Body className="text-center">
-                <Card.Title>Post Title</Card.Title>
-                <Card.Text>Post Description</Card.Text>
+                <Card.Title>{singlePost.postAuthor}</Card.Title>
+                <Card.Text>{singlePost.postText}</Card.Text>
               </Card.Body>
             </Card>
-
+      
             {/* Comment Form */}
             {Auth.loggedIn() ? (
               <>
@@ -47,7 +65,7 @@ export default function SinglePost() {
               </>
             )}
           </div>
-
+      
           {/* Posted Comments Box */}
           <div className="commentBox pt-3">
             <Card style={{ width: "20rem" }}>
@@ -178,47 +196,10 @@ export default function SinglePost() {
         </div>
       </div>
     </>
+    }</>
   );
-}
 
-function undefined({ handleShow, show, handleClose }) {
-  return (
-    <div className="commentForm">
-      <Form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="commentHeader fs-2">Comments</Form.Label>
-          <Form.Control type="comment" placeholder="Enter comment" />
-        </Form.Group>
-
-        {/* Add Comment Btn */}
-        <Button variant="primary" onClick={handleShow}>
-          Add Comment
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>Add Comment</Modal.Header>
-
-          {/* Edit Post TextArea */}
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows={2} />
-          </Form.Group>
-
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </Form>
-    </div>
-  );
+  
 }
 
 function WriteComment({ handleShow, show, handleClose }) {
@@ -259,4 +240,5 @@ function WriteComment({ handleShow, show, handleClose }) {
       </Form>
     </div>
   );
+  
 }

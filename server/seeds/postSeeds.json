@@ -1,18 +1,19 @@
 [
     {
-      "thoughtText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
-      "thoughtAuthor": "Brian"
+      "postText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+      "postAuthor": "Brian",
+      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
     },
     {
-      "thoughtText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-      "thoughtAuthor": "Max"
+      "postText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
+      "postAuthor": "Max"
     },
     {
-      "thoughtText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-      "thoughtAuthor": "Why"
+      "postText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
+      "postAuthor": "Why"
     },
     {
-      "thoughtText": "I'm not a great programmer; I'm just a good programmer with great habits.",
-      "thoughtAuthor": "Kent"
+      "postText": "I'm not a great programmer; I'm just a good programmer with great habits.",
+      "postAuthor": "Kent"
     }
 ]
