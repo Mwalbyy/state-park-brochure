@@ -47,6 +47,7 @@ query user($username: String) {
       _id
       postText
       postAuthor
+      imageTag
       createdAt
     }
   }
@@ -63,6 +64,7 @@ query me {
       _id
       postText
       postAuthor
+      imageTag
       createdAt
     }
   }
