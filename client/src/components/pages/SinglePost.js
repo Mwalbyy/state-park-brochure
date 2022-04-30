@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import forest from "./home/images/definitlyNJ.jpg";
 import Auth from "../../utils/auth";
+import WriteComment from "../WriteComment";
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
@@ -202,26 +203,4 @@ export default function SinglePost() {
   
 }
 
-function WriteComment({ handleShow, show, handleClose }) {
-  return (
-    <div className="commentForm">
-      <Form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="commentHeader fs-2">Comments</Form.Label>
-          <Form.Control type="comment" placeholder="Enter comment" />
-        </Form.Group>
 
-        {/* Add Comment Btn */}
-        <Button variant="primary" onClick={handleShow}>
-          Add Comment
-        </Button>
-      </Form>
-    </div>
-  );
-  
-}
