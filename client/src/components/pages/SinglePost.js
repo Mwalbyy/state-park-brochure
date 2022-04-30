@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import forest from "./home/images/definitlyNJ.jpg";
 import Auth from "../../utils/auth";
+import WriteComment from "../WriteComment";
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from "@apollo/client";

@@ -75,7 +75,7 @@ export default function Navigation({ currentPage, handlePageChange }) {
                   <LoggedIn currentPage={currentPage} />
                   <LinkContainer to="/">
                     <button
-                      className="btn btn-lg btn-light m-2"
+                      className="btn btn-sm btn-light m-2"
                       onClick={logout}
                     >
                       Logout
@@ -107,7 +107,7 @@ function LoggedIn({ currentPage }) {
             : "nav-link navText"
         }
       >
-        {Auth.getProfile().data.username}'s profile
+        
         <i className="fa-solid fa-user fa-2xl"></i>
       </Nav.Link>
     </LinkContainer>

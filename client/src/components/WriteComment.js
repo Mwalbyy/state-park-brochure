@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../utils/mutations';
 import Auth from '../utils/auth';
-
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 
 function WriteComment({ handleShow, postId }) {
@@ -15,7 +16,7 @@ function WriteComment({ handleShow, postId }) {
         const {data} = await addComment({
             variables: {
                 postId, 
-                commentText,
+                comments,
                 commentAuthor: Auth.getProfile().data.username,
             }
         });
@@ -27,8 +28,8 @@ function WriteComment({ handleShow, postId }) {
     const handleChange = (event) => {
         const { name, value } = event.target;
     
-        if (name === 'commentText' && value.length <= 280) {
-          setCommentText(value);
+        if (name === 'comments' && value.length <= 280) {
+          setComments(value);
         }
       };
 
@@ -54,3 +55,4 @@ function WriteComment({ handleShow, postId }) {
     );
     
   }
+  export default WriteComment;
