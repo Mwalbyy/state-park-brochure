@@ -59,7 +59,7 @@ const Profile = () => {
               return (
               <li className='postList' key={post._id}>
                 {console.log(post._id)}
-                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/post/${post._id}`}>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/singlePost/${post._id}`}>
                       <img src={post.imageTag} alt="user uploaded"/>
                       {post.postText}
                       {console.log(post.postText)}
@@ -67,7 +67,6 @@ const Profile = () => {
                       <br></br> 
                       
                       </Link>
-                      By: {post.postAuthor}
               </li>
             )
           })}

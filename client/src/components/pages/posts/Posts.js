@@ -23,7 +23,7 @@ const Posts = () => {
               to={`/singlePost/${post._id}`}
             >
               <Image src={post.imageTag} alt="Image of Post" />
-              {post.postAuthor}
+              
             </Link>
           );
         })}

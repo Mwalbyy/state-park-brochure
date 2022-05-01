@@ -57,7 +57,7 @@ const resolvers = {
       return post;
     },
     addComment: async (parent, { postId, commentAuthor, commentText }) => {
-      return Post.findOneAndUpdate(
+      await Post.findOneAndUpdate(
         { _id: postId },
         {
           $addToSet: { comments: { commentAuthor, commentText } },
