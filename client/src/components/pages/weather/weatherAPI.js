@@ -91,7 +91,7 @@ function renderWeather(city, data) {
         return response.json();
       })
       .then(function (data) {
-        console.log(city, data)
+    
         renderWeather(city, data)
   
       })

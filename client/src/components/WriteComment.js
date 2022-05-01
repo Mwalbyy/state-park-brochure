@@ -22,9 +22,6 @@ function WriteComment({ postId }) {
       });
       setCommentText("");
     } catch (err) {
-console.log(Auth.getProfile().data.username)
-console.log(postId)
-console.log(commentText)
 
       console.error(err);
     }
@@ -58,7 +55,6 @@ console.log(commentText)
               onChange={handleChange}
             />
           </Form.Group>
-          {console.log(commentText)}
 
           <Button variant="primary" type="submit">
             Add Comment
