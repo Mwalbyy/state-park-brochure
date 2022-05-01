@@ -67,7 +67,6 @@ const Profile = () => {
                       <br></br> 
                       
                       </Link>
-                      By: {post.postAuthor}
               </li>
             )
           })}

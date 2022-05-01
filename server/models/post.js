@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
-const Comment = require('./comment')
+const commentSchema = require('./comment')
 
 const postSchema = new Schema ({
   postText: {
