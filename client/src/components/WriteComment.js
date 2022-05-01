@@ -48,16 +48,14 @@ function WriteComment({ postId }) {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="commentHeader fs-2">Comments</Form.Label>
           <Form.Control
-          
+            name="comments"
+            type="text"
             placeholder="Enter comment"
             value={comments}
             onChange={handleChange}
           />
-            <Form.Text></Form.Text>
-          
         </Form.Group>
 
-        {/* Add Comment Btn */}
         <Button variant="primary" type="submit">
           Add Comment
         </Button>
