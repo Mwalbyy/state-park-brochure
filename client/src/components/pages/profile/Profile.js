@@ -42,7 +42,7 @@ const Profile = () => {
   
   return (
     <>
-    <div>
+    <div style={{color: 'white',backgroundColor: 'black', height: '100vh'}}>
       <div className="flex-row justify-center mb-3">
         <h3>
 
@@ -51,7 +51,8 @@ const Profile = () => {
         </h3>
         {console.log(Auth.getProfile().data)}
 
-        <div className="col-12 col-md-10 mb-5">
+        <div className="col-12 col-md-10 mb-5"
+        >
           {user.username}
           
             <ul className='square'>
@@ -59,7 +60,7 @@ const Profile = () => {
               return (
               <li className='postList' key={post._id}>
                 {console.log(post._id)}
-                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/post/${post._id}`}>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/singlePost/${post._id}`}>
                       <img src={post.imageTag} alt="user uploaded"/>
                       {post.postText}
                       {console.log(post.postText)}
