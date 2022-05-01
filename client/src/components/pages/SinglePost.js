@@ -23,6 +23,8 @@ export default function SinglePost() {
 
   const singlePost = data?.post || [];
   console.log(singlePost);
+  const comments = data?.post.comments || []
+  console.log(comments);
 
   return (
     <>
@@ -67,6 +69,7 @@ export default function SinglePost() {
               {/* Posted Comments Box */}
               {/* Comment LIST */}
               <CommentList
+                comments={comments}
                 handleShow={handleShow}
                 show={show}
                 handleClose={handleClose}

@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 
-function WriteComment({ handleShow, postId }) {
+function WriteComment({ postId }) {
     const [comments, setComments] = useState('')
     const [addComment, {error}] = useMutation(ADD_COMMENT);
     const handleFormSubmit = async (event) => {
