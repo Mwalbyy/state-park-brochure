@@ -52,6 +52,7 @@ export default function SinglePost() {
                 {Auth.loggedIn() ? (
                   <>
                     <WriteComment
+                      postId={singlePost._id}
                       handleShow={handleShow}
                       show={show}
                       handleClose={handleClose}
