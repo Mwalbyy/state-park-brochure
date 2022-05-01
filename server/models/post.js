@@ -25,12 +25,7 @@ const postSchema = new Schema ({
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  comments: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Comment',
-    }
-  ]
+  comments: [commentSchema]
 });
 
 const Post = model('Post', postSchema);
