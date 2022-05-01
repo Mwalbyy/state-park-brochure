@@ -17,6 +17,11 @@
     {
       "postText": "I'm not a great programmer; I'm just a good programmer with great habits.",
       "postAuthor": "Kent",
-      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
+      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg",
+      "comments" : [{
+        "commentAuthor" : "marcus",
+        "commentText" : "please work"
+      }
+    ]
     }
 ]
