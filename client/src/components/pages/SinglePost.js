@@ -22,9 +22,7 @@ export default function SinglePost() {
   });
 
   const singlePost = data?.post || [];
-  console.log(singlePost);
   const comments = data?.post.comments || []
-  console.log(comments);
 
   return (
     <>

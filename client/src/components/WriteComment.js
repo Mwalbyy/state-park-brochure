@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
+import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from "../utils/mutations";
 import Auth from "../utils/auth";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function WriteComment({ postId }) {
-  const [comments, setComments] = useState("");
+  const [commentText, setCommentText] = useState("");
 
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
@@ -17,12 +17,13 @@ function WriteComment({ postId }) {
       const { data } = await addComment({
         variables: {
           postId,
-          comments,
+          commentText,
           commentAuthor: Auth.getProfile().data.username,
         },
+        
       });
 
-      setComments("");
+      setCommentText("");
     } catch (err) {
       console.error(err);
     }
@@ -31,12 +32,13 @@ function WriteComment({ postId }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === "comments" && value.length <= 280) {
-      setComments(value);
+    if (name === "commentText" && value.length <= 280) {
+      setCommentText(value);
     }
   };
 
   return (
+    <>
     <div className="commentForm">
       <Form
         onSubmit={handleFormSubmit}
@@ -48,10 +50,10 @@ function WriteComment({ postId }) {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="commentHeader fs-2">Comments</Form.Label>
           <Form.Control
-            name="comments"
+            name="commentText"
             type="text"
             placeholder="Enter comment"
-            value={comments}
+            value={commentText}
             onChange={handleChange}
           />
         </Form.Group>
@@ -59,8 +61,16 @@ function WriteComment({ postId }) {
         <Button variant="primary" type="submit">
           Add Comment
         </Button>
+        {error && (
+              <div style={{color: 'red'}}>
+                {error.message}
+              </div>
+              
+            )}
       </Form>
     </div>
+    </>
   );
 }
+
 export default WriteComment;
