@@ -12,7 +12,6 @@ function WriteComment({ postId }) {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const { data } = await addComment({
         variables: {
@@ -20,11 +19,13 @@ function WriteComment({ postId }) {
           commentText,
           commentAuthor: Auth.getProfile().data.username,
         },
-        
       });
-
       setCommentText("");
     } catch (err) {
+console.log(Auth.getProfile().data.username)
+console.log(postId)
+console.log(commentText)
+
       console.error(err);
     }
   };
@@ -39,36 +40,32 @@ function WriteComment({ postId }) {
 
   return (
     <>
-    <div className="commentForm">
-      <Form
-        onSubmit={handleFormSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="commentHeader fs-2">Comments</Form.Label>
-          <Form.Control
-            name="commentText"
-            type="text"
-            placeholder="Enter comment"
-            value={commentText}
-            onChange={handleChange}
-          />
-        </Form.Group>
+      <div className="commentForm">
+        <Form
+          onSubmit={handleFormSubmit}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label className="commentHeader fs-2">Comments</Form.Label>
+            <Form.Control
+              name="commentText"
+              type="text"
+              placeholder="Enter comment"
+              value={commentText}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          {console.log(commentText)}
 
-        <Button variant="primary" type="submit">
-          Add Comment
-        </Button>
-        {error && (
-              <div style={{color: 'red'}}>
-                {error.message}
-              </div>
-              
-            )}
-      </Form>
-    </div>
+          <Button variant="primary" type="submit">
+            Add Comment
+          </Button>
+          {error && <div style={{ color: "red" }}>{error.message}</div>}
+        </Form>
+      </div>
     </>
   );
 }
