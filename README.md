@@ -8,23 +8,24 @@ A website for the Palisades Interstate Park where they can sign up and post abou
 2. Navigate back to the homepage by clicking the Home button at the top of the page.
 3. Once back at the homepage you can then check the posts and see what other people are saying about the park and things they have done while they enjoyed their time there.
 5. If you feel like you have something you want to share you can click on their post and leave a comment under it to share your feedback with them.
-6. If you want to create a post yourself you can click on <!-- SinglePost --> and write your own. Click submit and it will be posted.
+6. If you want to create a post yourself you can click on Posts and write your own. Click submit and it will be posted.
 7. You can also click on the weather tab and check out the forecaast for the next 5 days for the park
 
 ## Homepage
-![homepage]()
+![homepage](../state-park-brochure/client/src/components/pages/home/images/palisades-homepage.png)
 
 ## Register
-![register]
+![register](../state-park-brochure/client/src/components/pages/home/images/palisades-register.png)
 
 ## Posts
-![posts]()
+![posts](../state-park-brochure/client/src/components/pages/home/images/palisades-posts.png)
 
-## Single Post
-![singlePost]()
+## Posts and Comments
+![postsComments](../state-park-brochure/client/src/components/pages/home/images/posts-comments.png)
+
 
 ## Weather
-![weather]()
+![weather](../state-park-brochure/client/src/components/pages/home/images/palisades-weather.png)
 
 # Contributers
 
