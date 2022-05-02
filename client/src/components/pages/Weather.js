@@ -10,8 +10,7 @@ export default function Weather() {
 
   function renderForecast(forecast) {
     const forecastArray = [];
-    console.log(forecast);
-    console.log(forecast.daily.dt);
+   
     for (let i = 0; i < 5; i++) {
       const day = {
         key: i,

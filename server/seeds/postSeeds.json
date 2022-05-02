@@ -1,22 +1,31 @@
 [
     {
-      "postText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+      "postText": "This park is the perfect place to go on a day trip",
       "postAuthor": "Brian",
       "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
     },
     {
-      "postText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
+      "postText": "This small camping ground has everything you'd need to rest for the night and relax",
       "postAuthor": "Max",
-      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
+      "imageTag": "https://i.ibb.co/mrnmh9M/campground.jpg"
     },
     {
-      "postText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
+      "postText": "This side trail was very challenging but offered great sights",
       "postAuthor": "Why",
-      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
+      "imageTag": "https://i.ibb.co/Fs1RgsP/forest-Trail.jpg"
     },
     {
-      "postText": "I'm not a great programmer; I'm just a good programmer with great habits.",
+      "postText": "The bridge may have been rickety but was still a fun experience",
       "postAuthor": "Kent",
-      "imageTag": "https://i.ibb.co/VQNZc0T/postOne.jpg"
+      "imageTag": "https://i.ibb.co/pzxS5MS/forest-Bridge.jpg",
+      "comments" : [{
+        "commentAuthor" : "marcus",
+        "commentText" : "please work"
+      },
+      {
+        "commentAuthor" : "Blake",
+        "commentText" : "YO this working?"
+      }
+    ]
     }
 ]

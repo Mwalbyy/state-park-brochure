@@ -11,13 +11,11 @@ import Auth from '../../../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();
-  console.log("userParam", userParam)
+  
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
-  console.log("data", data)
-
 
   const user = data?.me || data?.user || {};
   // navigate to personal profile page if username is yours
@@ -27,7 +25,7 @@ const Profile = () => {
   }
 
   if (!Auth.loggedIn()) {
-    console.log(data);
+    
     return (
       <>
         <h4>
@@ -42,32 +40,36 @@ const Profile = () => {
   
   return (
     <>
-    <div>
+    <div style={{color: 'white',backgroundColor: 'black', height: '100vh'}}>
       <div className="flex-row justify-center mb-3">
         <h3>
 
           Viewing {Auth.getProfile().data.username}'s profile.
           
         </h3>
-        {console.log(Auth.getProfile().data)}
+        
 
-        <div className="col-12 col-md-10 mb-5">
+        <div className="col-12 col-md-10 mb-5"
+        >
           {user.username}
           
             <ul className='square'>
             {postList.map((post) => {
               return (
               <li className='postList' key={post._id}>
+<<<<<<< HEAD
+               
+=======
                 {console.log(post._id)}
-                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/post/${post._id}`}>
-                      <img src={post.imageTag} alt="image"/>
+>>>>>>> 7fddb64776a02ee810f4ef865c4b9f592147c00d
+                <Link style={{ textDecoration: 'none', color: 'white' }} to={`/singlePost/${post._id}`}>
+                      <img src={post.imageTag} alt="user uploaded"/>
                       {post.postText}
-                      {console.log(post.postText)}
+                     
                       <br></br>
                       <br></br> 
                       
                       </Link>
-                      By: {post.postAuthor}
               </li>
             )
           })}

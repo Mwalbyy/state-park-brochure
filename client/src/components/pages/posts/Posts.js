@@ -6,7 +6,7 @@ import Image from "react-bootstrap/Image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const Posts = () => {
-  const { loading, data } = useQuery(QUERY_POSTS, {
+  const { data } = useQuery(QUERY_POSTS, {
     fetchPolicy: "no-cache",
   });
 
@@ -23,7 +23,7 @@ const Posts = () => {
               to={`/singlePost/${post._id}`}
             >
               <Image src={post.imageTag} alt="Image of Post" />
-              {post.postAuthor}
+              
             </Link>
           );
         })}
