@@ -57,11 +57,7 @@ const Profile = () => {
             {postList.map((post) => {
               return (
               <li className='postList' key={post._id}>
-<<<<<<< HEAD
                
-=======
-                {console.log(post._id)}
->>>>>>> 7fddb64776a02ee810f4ef865c4b9f592147c00d
                 <Link style={{ textDecoration: 'none', color: 'white' }} to={`/singlePost/${post._id}`}>
                       <img src={post.imageTag} alt="user uploaded"/>
                       {post.postText}
